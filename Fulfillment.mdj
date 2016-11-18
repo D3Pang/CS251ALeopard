@@ -14849,7 +14849,7 @@
 													"containerChangeable": false,
 													"containerExtending": false,
 													"left": 640,
-													"top": -256,
+													"top": 224,
 													"width": 0,
 													"height": 13,
 													"autoResize": false,
@@ -14873,7 +14873,7 @@
 													"containerChangeable": false,
 													"containerExtending": false,
 													"left": 444,
-													"top": 59.5,
+													"top": 299.5,
 													"width": 62,
 													"height": 13,
 													"autoResize": false,
@@ -14898,7 +14898,7 @@
 													"containerChangeable": false,
 													"containerExtending": false,
 													"left": 640,
-													"top": -256,
+													"top": 224,
 													"width": 123,
 													"height": 13,
 													"autoResize": false,
@@ -14923,7 +14923,7 @@
 													"containerChangeable": false,
 													"containerExtending": false,
 													"left": 640,
-													"top": -256,
+													"top": 224,
 													"width": 0,
 													"height": 13,
 													"autoResize": false,
@@ -14942,7 +14942,7 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 439,
-											"top": 52.5,
+											"top": 292.5,
 											"width": 72,
 											"height": 25,
 											"autoResize": false,
@@ -14978,7 +14978,7 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 320,
-											"top": -128,
+											"top": 112,
 											"width": 10,
 											"height": 10,
 											"autoResize": false
@@ -15002,7 +15002,7 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 320,
-											"top": -128,
+											"top": 112,
 											"width": 10,
 											"height": 10,
 											"autoResize": false
@@ -15026,7 +15026,7 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 320,
-											"top": -128,
+											"top": 112,
 											"width": 10,
 											"height": 10,
 											"autoResize": false
@@ -15050,7 +15050,7 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 320,
-											"top": -128,
+											"top": 112,
 											"width": 10,
 											"height": 10,
 											"autoResize": false
@@ -15074,7 +15074,7 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 320,
-											"top": -128,
+											"top": 112,
 											"width": 10,
 											"height": 10,
 											"autoResize": false
@@ -15090,7 +15090,7 @@
 									"containerChangeable": true,
 									"containerExtending": false,
 									"left": 424,
-									"top": 48,
+									"top": 288,
 									"width": 102,
 									"height": 35,
 									"autoResize": false,
@@ -15152,8 +15152,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 462,
-											"top": 107,
+											"left": 491,
+											"top": 227,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -15185,8 +15185,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 420,
-											"top": 108,
+											"left": 479,
+											"top": 228,
 											"width": 55,
 											"height": 13,
 											"autoResize": false,
@@ -15219,8 +15219,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 491,
-											"top": 106,
+											"left": 462,
+											"top": 226,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -15251,7 +15251,7 @@
 										"$ref": "AAAAAAFYcOmOPVU/Ev8="
 									},
 									"lineStyle": 1,
-									"points": "479:143;475:83",
+									"points": "479:179;475:287",
 									"stereotypeDisplay": "label",
 									"showVisibility": true,
 									"showProperty": true,
@@ -17675,6 +17675,147 @@
 									"headQualifiersCompartment": {
 										"$ref": "AAAAAAFYdFK/Um7GVc4="
 									}
+								},
+								{
+									"_type": "UMLIncludeView",
+									"_id": "AAAAAAFYeYGjEVm7IrQ=",
+									"_parent": {
+										"$ref": "AAAAAAFYcOgEblQstvs="
+									},
+									"model": {
+										"$ref": "AAAAAAFYeYGjEFm5A3w="
+									},
+									"subViews": [
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFYeYGjElm8ScE=",
+											"_parent": {
+												"$ref": "AAAAAAFYeYGjEVm7IrQ="
+											},
+											"model": {
+												"$ref": "AAAAAAFYeYGjEFm5A3w="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 458,
+											"top": 382,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "AAAAAAFYeYGjEVm7IrQ="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFYeYGjElm9gs4=",
+											"_parent": {
+												"$ref": "AAAAAAFYeYGjEVm7IrQ="
+											},
+											"model": {
+												"$ref": "AAAAAAFYeYGjEFm5A3w="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 416,
+											"top": 382,
+											"width": 55,
+											"height": 13,
+											"autoResize": false,
+											"alpha": 1.5707963267948966,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "AAAAAAFYeYGjEVm7IrQ="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"text": "«include»",
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFYeYGjElm+xp4=",
+											"_parent": {
+												"$ref": "AAAAAAFYeYGjEVm7IrQ="
+											},
+											"model": {
+												"$ref": "AAAAAAFYeYGjEFm5A3w="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 487,
+											"top": 383,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"alpha": -1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "AAAAAAFYeYGjEVm7IrQ="
+											},
+											"edgePosition": 1,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5
+										}
+									],
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"head": {
+										"$ref": "AAAAAAFYc7vt0S7mhw4="
+									},
+									"tail": {
+										"$ref": "AAAAAAFYdElUAWGb5dY="
+									},
+									"lineStyle": 1,
+									"points": "472:455;474:323",
+									"stereotypeDisplay": "label",
+									"showVisibility": true,
+									"showProperty": true,
+									"nameLabel": {
+										"$ref": "AAAAAAFYeYGjElm8ScE="
+									},
+									"stereotypeLabel": {
+										"$ref": "AAAAAAFYeYGjElm9gs4="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAFYeYGjElm+xp4="
+									}
 								}
 							]
 						},
@@ -17819,7 +17960,7 @@
 									"visibility": "public"
 								}
 							],
-							"documentation": "ID: Request Cart Purchase\nActors: Customer, IMS, SS\nDescription: a Customer requests to purchase an item/the items in their cart\nPriority: high\nRisk: high\nScenarios:\n   Main: a customer's purchase request is successfully fulfilled\n      1. Customer: Requests to purchase item(s) in cart\n      2. PFS: creates purchase order with status \"QUERY\", sent to IMS and SS\n      3. IMS: checks if all items are in stock\n      4. IMS: confirms all items are in stock\n      5. PFS: PO status updated to \"IN_STOCK\"\n      6. SS: sends shipping cost\n      7. PFS: PO updated with shipping cost\n      6. PFS: displays the shipping cost of the items and the total cost of the purchase\n\n   Alternate 1: the requested item(s) are not in stock\n      4'. IMS: confirms that one or more items in the order are out of stock\n      5'. PFS: PO status updated to \"OUT_OF_STOCK\"\n      6'. PFS: Customer informed of out of stock items and asked to change order or cancel it\n\n   Alternate 2: user uses a valid coupon code\n      1''. Customer: Requests to purchase item(s) in cart and specifies a coupon code to use with order\n      2''. PFS: confirms valid coupon code\n      3''. PFS: PO created with discounted price and status \"QUERY\", sent to IMS and SS, continue to Main 3",
+							"documentation": "ID: Request Cart Purchase\nActors: Customer, IMS, SS\nDescription: The Customer requests to purchase an item/the items in their cart\nPriority: high\nRisk: high\nScenarios:\n   Main: a customer's purchase request is successfully fulfilled\n      1. Customer: Requests to purchase item(s) in cart\n      2. PFS: creates purchase order with status \"QUERY\", sent to IMS and SS\n      3. IMS: checks if all items are in stock\n      4. IMS: confirms all items are in stock\n      5. PFS: PO status updated to \"IN_STOCK\"\n      6. SS: sends shipping cost\n      7. PFS: PO updated with shipping cost\n      6. PFS: displays the shipping cost of the items and the total cost of the purchase\n\n   Alternate 1: the requested item(s) are not in stock\n      4'. IMS: confirms that one or more items in the order are out of stock\n      5'. PFS: PO status updated to \"OUT_OF_STOCK\"\n      6'. PFS: Customer informed of out of stock items and asked to change order or cancel it\n\n   Alternate 2: user uses a valid coupon code\n      1''. Customer: Requests to purchase item(s) in cart and specifies a coupon code to use with order\n      2''. PFS: confirms valid coupon code\n      3''. PFS: PO created with discounted price and status \"QUERY\", sent to IMS and SS, continue to Main 3",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -17993,6 +18134,20 @@
 									},
 									"visibility": "public",
 									"isDerived": false
+								},
+								{
+									"_type": "UMLInclude",
+									"_id": "AAAAAAFYeYGjEFm5A3w=",
+									"_parent": {
+										"$ref": "AAAAAAFYdElUAGGZEHs="
+									},
+									"source": {
+										"$ref": "AAAAAAFYdElUAGGZEHs="
+									},
+									"target": {
+										"$ref": "AAAAAAFYc7vtzy7kH3E="
+									},
+									"visibility": "public"
 								}
 							],
 							"documentation": "ID: Confirm Purchase From Cart\nActors: Customer, IMS, SS, Accounting\nDescription: Customer confirms the purchase of their items from the cart\nPriority: high\nRisk: high\nScenarios:\n   Main: Customer successfully confirms purchase of their cart\n      1. Customer: confirms purchase of their cart\n      2. PFS: PO status updated to \"CONFIRMED\" \n      3. PFS: checks customer's payment information\n      4. PFS: confirms payment info is correct\n      5. Accounting: generates invoice for purchase\n      6. PFS: displays invoice to Customer\n      7. Customer: pays with credit card\n      8. PFS: charge credit card\n      9. PFS: charge successful\n      10. PFS: PO status changed to \"PURCHASED\"\n      11. PFS: PO sent to IMS\n      12. IMS: shipping details sent to SS\n\n   Alternate 1: Customer's payment information is incorrect\n      3'. PFS: confirmed Customer's payment info is incorrect\n      4'. PFS: prompt Customer for correct payment info\n      5'. repeat until valid info supplied/order cancelled\n      6'. PFS: update Customer's account with valid info\n     7'. proceed to Main 4\n\n   Alternate 2: Customer's card is denied\n      8''. PFS: charge unsuccessful\n      9''. PFS: prompt Customer to use a different card\n      10''. repeat until charge goes through or purchase cancelled\n     11''. proceed to Main 9\n\n   Alternate 3: Customer cancels order\n      1'''. control passes to Cancel In-Progress Order uc",
@@ -24225,7 +24380,7 @@
 							"visibility": "public"
 						}
 					],
-					"documentation": "ID: Edit Delivery Location\nActors: Customer\nDescription: The customer changes their deliver location or can removes or add delivery location/s.\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Edit a Delivery Location\n1. Customer: Presses the Edit Account Information button.\n2. UC: Changes display to Edit Account Information screen.\n3. Customer: Changes delivery location information\n4. Customer: Clicks save changes button\n5. UC: Saves changes to Customer's account\n\n    Alternate 1: Add Delivery Location\n3'. Customer: Presses add delivery location button\n4'. Customer: Enters delivery location\n5'. Customer: Clicks save changes button\n6'. UC: Saves changes to Customer's account\n\n    Alternate 2: Remove Delivery Location\n3''. Customer: Presses remove delivery location button\n4''. UC: Removes delivery location from Customer's Account\n\n    Alternate 3: Set Default Delivery Location\n3'''. Customer: Presses default checkmark box on delivery location\n4'''. UC: Saves changes to Customer's account",
+					"documentation": "ID: Edit Delivery Location\nActors: Customer\nDescription: The customer changes their deliver location or can removes or add delivery location(s).\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Edit a Delivery Location\n1. Customer: Presses the Edit Account Information button.\n2. UC: Changes display to Edit Account Information screen.\n3. Customer: Changes delivery location information\n4. Customer: Clicks save changes button\n5. UC: Saves changes to Customer's account\n\n    Alternate 1: Add Delivery Location\n3'. Customer: Presses add delivery location button\n4'. Customer: Enters delivery location\n5'. Customer: Clicks save changes button\n6'. UC: Saves changes to Customer's account\n\n    Alternate 2: Remove Delivery Location\n3''. Customer: Presses remove delivery location button\n4''. UC: Removes delivery location from Customer's Account\n\n    Alternate 3: Set Default Delivery Location\n3'''. Customer: Presses default checkmark box on delivery location\n4'''. UC: Saves changes to Customer's account",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -24254,7 +24409,7 @@
 							"visibility": "public"
 						}
 					],
-					"documentation": "ID: Edit Credit Card Information\nActors: Customer\nDescription: The customer changes their credit card information or can add or remove credit card/s.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Edit credit card information successfully\n1. Customer: Presses the Edit Account Information button.\n2. UC: Changes display to Edit Account Information screen.\n3. Customer: Changes credit card information\n4. Customer: Clicks save button\n5. UC: 'Confirm Payment Information' use case\n6. UC: Saves changes to Customer's account\n\n    Alternate 1: Add credit card information\n3'. Customer: Presses add credit card button\n4'. Customer: Enters credit card information\n5'. Customer: Clicks save button\n6'. UC: 'Confirm Payment Information' use case\n7'. UC: Saves changes to Customer's account\n\n    Alternate 2: Remove credit card information\n3''. Customer: Presses remove credit card button\n4''. UC: Removes credit card from Customer's Account\n\n    Alternate 3: Set credit card as default\n3'''. Customer: Presses default checkmark box on credit card\n4'''. UC: Saves changes to Customer's account",
+					"documentation": "ID: Edit Credit Card Information\nActors: Customer\nDescription: The customer changes their credit card information or can add or remove credit card(s).\nPriority: High\nRisk: Low\nScenarios:\n    Main: Edit credit card information successfully\n1. Customer: Presses the Edit Account Information button.\n2. UC: Changes display to Edit Account Information screen.\n3. Customer: Changes credit card information\n4. Customer: Clicks save button\n5. UC: 'Confirm Payment Information' use case\n6. UC: Saves changes to Customer's account\n\n    Alternate 1: Add credit card information\n3'. Customer: Presses add credit card button\n4'. Customer: Enters credit card information\n5'. Customer: Clicks save button\n6'. UC: 'Confirm Payment Information' use case\n7'. UC: Saves changes to Customer's account\n\n    Alternate 2: Remove credit card information\n3''. Customer: Presses remove credit card button\n4''. UC: Removes credit card from Customer's Account\n\n    Alternate 3: Set credit card as default\n3'''. Customer: Presses default checkmark box on credit card\n4'''. UC: Saves changes to Customer's account",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
