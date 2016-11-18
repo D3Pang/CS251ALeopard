@@ -719,7 +719,7 @@
 									"containerExtending": false,
 									"left": 357,
 									"top": 300.5,
-									"width": 118,
+									"width": 119.08447265625,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -1030,7 +1030,7 @@
 									"containerExtending": false,
 									"left": 358,
 									"top": 388.5,
-									"width": 115,
+									"width": 115.4853515625,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -1341,7 +1341,7 @@
 									"containerExtending": false,
 									"left": 257.5,
 									"top": 460.5,
-									"width": 122,
+									"width": 121.95361328125,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -1652,7 +1652,7 @@
 									"containerExtending": false,
 									"left": 442,
 									"top": 460.5,
-									"width": 164,
+									"width": 163.8798828125,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -4023,7 +4023,7 @@
 									"containerExtending": false,
 									"left": 375,
 									"top": 532.5,
-									"width": 81,
+									"width": 81.5,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -5637,7 +5637,7 @@
 									"containerExtending": false,
 									"left": 368.5,
 									"top": 668.5,
-									"width": 97,
+									"width": 96.67724609375,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -9206,7 +9206,7 @@
 									"containerExtending": false,
 									"left": 414.5,
 									"top": 68.5,
-									"width": 147,
+									"width": 146.53173828125,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -10108,7 +10108,7 @@
 									"containerExtending": false,
 									"left": 294,
 									"top": 732.5,
-									"width": 104,
+									"width": 103.1708984375,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -10419,7 +10419,7 @@
 									"containerExtending": false,
 									"left": 483,
 									"top": 724.5,
-									"width": 130,
+									"width": 129.18359375,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -11482,7 +11482,7 @@
 							"isDerived": false
 						}
 					],
-					"documentation": "ID: Browse Items\nActors: Customer, IMS\nDescription: Customer browses product catalog\nPriority: high\nRisk: low\nScenarios:\n   Main: Customer browses products by category\n1. Customer: chooses to browse product category\n2. IMS: returns inventory of chosen category\n3. PFS: displays all products in category\n\n   Alternate 1: Customer browses all products\n1'. Customer: chooses to browse all products\n2'. IMS: returns inventory of all products\n3'. PFS: displays all products",
+					"documentation": "ID: Browse Items\nActors: Customer, IMS\nDescription: Customer browses product catalog\nPriority: high\nRisk: low\nScenarios:\n   Main: Customer browses products by category\n1. Customer: chooses to browse product category\n2. IMS: returns inventory of chosen category\n3. UC: displays all products in category\n\n   Alternate 1: Customer browses all products\n1'. Customer: chooses to browse all products\n2'. IMS: returns inventory of all products\n3'. UC: displays all products",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -11542,7 +11542,7 @@
 							"isDerived": false
 						}
 					],
-					"documentation": "ID: Search Items\nActors: Customer, IMS\nDescription: Customer searches the catalog of products\nPriority: high\nRisk:  low\nScenarios:\n   Main: Customer searches catalog\n1. Customer: enters search terms and filters for     \n    search, and how to sort results\n2.  PFS: requests product info from IMS\n3. IMS: returns product info including stocking \n    status\n4. PFS: displays products that match search criteria \n    and in requested order",
+					"documentation": "ID: Search Items\nActors: Customer, IMS\nDescription: Customer searches the catalog of products\nPriority: high\nRisk:  low\nScenarios:\n   Main: Customer searches catalog\n1. Customer: enters search terms and filters for     \n    search, and how to sort results\n2.  UC: requests product info from IMS\n3. IMS: returns product info including stocking \n    status\n4. UC: displays products that match search criteria \n    and in requested order",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -14491,7 +14491,7 @@
 											"containerExtending": false,
 											"left": 132.5,
 											"top": 623.5,
-											"width": 173,
+											"width": 173.9599609375,
 											"height": 40,
 											"autoResize": false,
 											"stereotypeLabel": {
@@ -14735,7 +14735,7 @@
 											"containerExtending": false,
 											"left": 334,
 											"top": 581,
-											"width": 55,
+											"width": 55.65625,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -15187,7 +15187,7 @@
 											"containerExtending": false,
 											"left": 479,
 											"top": 228,
-											"width": 55,
+											"width": 55.65625,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -15395,7 +15395,7 @@
 											"containerExtending": false,
 											"left": 416.5,
 											"top": 684.5,
-											"width": 118,
+											"width": 118.392578125,
 											"height": 25,
 											"autoResize": false,
 											"stereotypeLabel": {
@@ -15639,7 +15639,7 @@
 											"containerExtending": false,
 											"left": 475,
 											"top": 587,
-											"width": 55,
+											"width": 55.65625,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -17739,7 +17739,7 @@
 											"containerExtending": false,
 											"left": 416,
 											"top": 382,
-											"width": 55,
+											"width": 55.65625,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -17960,7 +17960,7 @@
 									"visibility": "public"
 								}
 							],
-							"documentation": "ID: Request Cart Purchase\nActors: Customer, IMS, SS\nDescription: The Customer requests to purchase an item/the items in their cart\nPriority: high\nRisk: high\nScenarios:\n   Main: a customer's purchase request is successfully fulfilled\n      1. Customer: Requests to purchase item(s) in cart\n      2. PFS: creates purchase order with status \"QUERY\", sent to IMS and SS\n      3. IMS: checks if all items are in stock\n      4. IMS: confirms all items are in stock\n      5. PFS: PO status updated to \"IN_STOCK\"\n      6. SS: sends shipping cost\n      7. PFS: PO updated with shipping cost\n      6. PFS: displays the shipping cost of the items and the total cost of the purchase\n\n   Alternate 1: the requested item(s) are not in stock\n      4'. IMS: confirms that one or more items in the order are out of stock\n      5'. PFS: PO status updated to \"OUT_OF_STOCK\"\n      6'. PFS: Customer informed of out of stock items and asked to change order or cancel it\n\n   Alternate 2: user uses a valid coupon code\n      1''. Customer: Requests to purchase item(s) in cart and specifies a coupon code to use with order\n      2''. PFS: confirms valid coupon code\n      3''. PFS: PO created with discounted price and status \"QUERY\", sent to IMS and SS, continue to Main 3",
+							"documentation": "ID: Request Cart Purchase\nActors: Customer, IMS, SS\nDescription: The Customer requests to purchase an item/the items in their cart\nPriority: high\nRisk: high\nScenarios:\n   Main: a customer's purchase request is successfully fulfilled\n      1. Customer: Requests to purchase item(s) in cart\n      2. UC: creates purchase order with status \"QUERY\", sent to IMS and SS\n      3. IMS: checks if all items are in stock\n      4. IMS: confirms all items are in stock\n      5. UC: PO status updated to \"IN_STOCK\"\n      6. SS: sends shipping cost\n      7. UC: PO updated with shipping cost\n      6. UC: displays the shipping cost of the items and the total cost of the purchase\n\n   Alternate 1: the requested item(s) are not in stock\n      4'. IMS: confirms that one or more items in the order are out of stock\n      5'. PFS: PO status updated to \"OUT_OF_STOCK\"\n      6'. UC: Customer informed of out of stock items and asked to change order or cancel it\n\n   Alternate 2: user uses a valid coupon code\n      1''. Customer: Requests to purchase item(s) in cart and specifies a coupon code to use with order\n      2''. PFS: confirms valid coupon code\n      3''. PFS: PO created with discounted price and status \"QUERY\", sent to IMS and SS, continue to Main 3",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -18150,7 +18150,7 @@
 									"visibility": "public"
 								}
 							],
-							"documentation": "ID: Confirm Purchase From Cart\nActors: Customer, IMS, SS, Accounting\nDescription: Customer confirms the purchase of their items from the cart\nPriority: high\nRisk: high\nScenarios:\n   Main: Customer successfully confirms purchase of their cart\n      1. Customer: confirms purchase of their cart\n      2. PFS: PO status updated to \"CONFIRMED\" \n      3. PFS: checks customer's payment information\n      4. PFS: confirms payment info is correct\n      5. Accounting: generates invoice for purchase\n      6. PFS: displays invoice to Customer\n      7. Customer: pays with credit card\n      8. PFS: charge credit card\n      9. PFS: charge successful\n      10. PFS: PO status changed to \"PURCHASED\"\n      11. PFS: PO sent to IMS\n      12. IMS: shipping details sent to SS\n\n   Alternate 1: Customer's payment information is incorrect\n      3'. PFS: confirmed Customer's payment info is incorrect\n      4'. PFS: prompt Customer for correct payment info\n      5'. repeat until valid info supplied/order cancelled\n      6'. PFS: update Customer's account with valid info\n     7'. proceed to Main 4\n\n   Alternate 2: Customer's card is denied\n      8''. PFS: charge unsuccessful\n      9''. PFS: prompt Customer to use a different card\n      10''. repeat until charge goes through or purchase cancelled\n     11''. proceed to Main 9\n\n   Alternate 3: Customer cancels order\n      1'''. control passes to Cancel In-Progress Order uc",
+							"documentation": "ID: Confirm Purchase From Cart\nActors: Customer, IMS, SS, Accounting\nDescription: Customer confirms the purchase of their items from the cart\nPriority: high\nRisk: high\nScenarios:\n   Main: Customer successfully confirms purchase of their cart\n      1. Customer: confirms purchase of their cart\n      2. UC: PO status updated to \"CONFIRMED\" \n      3. UC: checks customer's payment information\n      4. UC: confirms payment info is correct\n      5. Accounting: generates invoice for purchase\n      6. UC: displays invoice to Customer\n      7. Customer: pays with credit card\n      8. UC: charge credit card\n      9. UC: charge successful\n      10. UC: PO status changed to \"PURCHASED\"\n      11. UC: PO sent to IMS\n      12. IMS: shipping details sent to SS\n\n   Alternate 1: Customer's payment information is incorrect\n      3'. UC: confirmed Customer's payment info is incorrect\n      4'. UC: prompt Customer for correct payment info\n      5'. repeat until valid info supplied/order cancelled\n      6'. UC: update Customer's account with valid info\n     7'. proceed to Main 4\n\n   Alternate 2: Customer's card is denied\n      8''. UC: charge unsuccessful\n      9''. UC: prompt Customer to use a different card\n      10''. repeat until charge goes through or purchase cancelled\n     11''. proceed to Main 9\n\n   Alternate 3: Customer cancels order\n      1'''. control passes to Cancel In-Progress Order uc",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -20027,7 +20027,7 @@
 											"containerExtending": false,
 											"left": 415,
 											"top": 84.5,
-											"width": 129,
+											"width": 129.92626953125,
 											"height": 25,
 											"autoResize": false,
 											"stereotypeLabel": {
@@ -20649,7 +20649,7 @@
 											"containerExtending": false,
 											"left": 443,
 											"top": 228.5,
-											"width": 75,
+											"width": 75.025390625,
 											"height": 25,
 											"autoResize": false,
 											"stereotypeLabel": {
@@ -20960,7 +20960,7 @@
 											"containerExtending": false,
 											"left": 196.5,
 											"top": 247.5,
-											"width": 173,
+											"width": 173.9599609375,
 											"height": 40,
 											"autoResize": false,
 											"stereotypeLabel": {
@@ -22440,7 +22440,7 @@
 											"containerExtending": false,
 											"left": 481,
 											"top": 162,
-											"width": 55,
+											"width": 55.65625,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -22581,7 +22581,7 @@
 											"containerExtending": false,
 											"left": 422,
 											"top": 330,
-											"width": 55,
+											"width": 55.65625,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -22722,7 +22722,7 @@
 											"containerExtending": false,
 											"left": 340,
 											"top": 372,
-											"width": 55,
+											"width": 55.65625,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -22930,7 +22930,7 @@
 											"containerExtending": false,
 											"left": 428.5,
 											"top": 516.5,
-											"width": 103,
+											"width": 103.17724609375,
 											"height": 25,
 											"autoResize": false,
 											"stereotypeLabel": {
@@ -23174,7 +23174,7 @@
 											"containerExtending": false,
 											"left": 481,
 											"top": 474,
-											"width": 55,
+											"width": 55.65625,
 											"height": 13,
 											"autoResize": false,
 											"alpha": 1.5707963267948966,
@@ -24146,7 +24146,7 @@
 									"visibility": "public"
 								}
 							],
-							"documentation": "ID: Cancel Transaction\nActors: Customer, IMS, Accounting\nDescription: Customer cancels a transaction\nPriority: high\nRisk: high\nScenarios:\n   Main: Customer cancels a transaction\n       1. Customer: cancels an in-progress transaction\n       2.  PFS: status of associated PO is updated to \"CANCELLED\"\n       3. PFS: user account updated with cancelled  order\n       4. PFS: cancelled PO sent to IMS\n       5. IMS: shipping cancelled and product returned to warehouse\n       6. Accounting: order invoice cancelled",
+							"documentation": "ID: Cancel Transaction\nActors: Customer, IMS, Accounting\nDescription: Customer cancels a transaction\nPriority: high\nRisk: high\nScenarios:\n   Main: Customer cancels a transaction\n       1. Customer: cancels an in-progress transaction\n       2.  UC: status of associated PO is updated to \"CANCELLED\"\n       3. UC: user account updated with cancelled  order\n       4. UC: cancelled PO sent to IMS\n       5. IMS: shipping cancelled and product returned to warehouse\n       6. Accounting: order invoice cancelled",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -24248,7 +24248,7 @@
 									"isDerived": false
 								}
 							],
-							"documentation": "ID: Cancel In-Progress Order\nActors: Service Agent, SS, Accounting\nDescription: An in-progress order is cancelled by a Service Agent\nPriority: high\nRisk: high\nScenarios:\n   Main: order successfully canceled\n      1. Service Agent: views and cancels an in-progress order\n      2. PFS: the purchase order status is set to \"CANCELLED\"\n      3. PFS: the associated Customer's user account is updated to show the cancelled order\n      4. SS: shipping order cancelled and product returned to inventory\n      5. Service Agent: refund the order's invoice\n      6. Accounting: update logs with the cancelled order",
+							"documentation": "ID: Cancel In-Progress Order\nActors: Service Agent, SS, Accounting\nDescription: An in-progress order is cancelled by a Service Agent\nPriority: high\nRisk: high\nScenarios:\n   Main: order successfully canceled\n      1. Service Agent: views and cancels an in-progress order\n      2. UC: the purchase order status is set to \"CANCELLED\"\n      3. UC: the associated Customer's user account is updated to show the cancelled order\n      4. SS: shipping order cancelled and product returned to inventory\n      5. Service Agent: refund the order's invoice\n      6. Accounting: update logs with the cancelled order",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
