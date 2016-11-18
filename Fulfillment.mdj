@@ -11070,7 +11070,7 @@
 							"isDerived": false
 						}
 					],
-					"documentation": "ID: Browse Items\nActors: Customer, IMS\nDescription: Customer browses product catalog\nPriority: high\nRisk: low\nScenarios:\n   Main: Customer browses products by category\n      1. Customer: chooses to browse product category\n      2. IMS: returns inventory of chosen category\n      3. PFS: displays all products in category\n   Alternate 1: Customer browses all products\n      1. Customer: chooses to browse all products\n      2. IMS: returns inventory of all products\n      3. PFS: displays all products",
+					"documentation": "ID: Browse Items\nActors: Customer, IMS\nDescription: Customer browses product catalog\nPriority: high\nRisk: low\nScenarios:\n   Main: Customer browses products by category\n1. Customer: chooses to browse product category\n2. IMS: returns inventory of chosen category\n3. PFS: displays all products in category\n   Alternate 1: Customer browses all products\n1'. Customer: chooses to browse all products\n2'. IMS: returns inventory of all products\n3'. PFS: displays all products",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -11130,7 +11130,7 @@
 							"isDerived": false
 						}
 					],
-					"documentation": "ID: Search Items\nActors: Customer, IMS\nDescription: Customer searches the catalog of products\nPriority: high\nRisk:  low\nScenarios:\n   Main: Customer searches catalog\n      1. Customer: enters search terms and filters for search, and how to sort results\n      2.  PFS: requests product info from IMS\n      3. IMS: returns product info including stocking status\n      4.  PFS: displays products that match search criteria and in requested order",
+					"documentation": "ID: Search Items\nActors: Customer, IMS\nDescription: Customer searches the catalog of products\nPriority: high\nRisk:  low\nScenarios:\n   Main: Customer searches catalog\n1. Customer: enters search terms and filters for     \n    search, and how to sort results\n2.  PFS: requests product info from IMS\n3. IMS: returns product info including stocking \n    status\n4. PFS: displays products that match search criteria \n    and in requested order",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -11159,7 +11159,7 @@
 							"visibility": "public"
 						}
 					],
-					"documentation": "ID: Add Items to Cart\nActors: Customer, Inventory Management System\nDescription: The customer adds an item to their cart.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Adds item to their cart. (don't forget to include quantity)\n1. Customer: Looks through inventory\n2. Customer: Press add to cart button\n3. UC: Add items to cart in Customer's account",
+					"documentation": "ID: Add Items to Cart\nActors: Customer, Inventory Management System\nDescription: The customer adds an item to their cart.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Adds item to their cart. (don't forget to \n    include quantity)\n1. Customer: Looks through inventory\n2. Customer: Press add to cart button\n3. UC: Add items to cart in Customer's account",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -11188,7 +11188,7 @@
 							"visibility": "public"
 						}
 					],
-					"documentation": "ID: Remove Item from Cart\nActors: Customer, Inventory Management System\nDescription: The customer removes an item to their cart.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Removes items from their cart. \n1. Customer: Enters cart \n2. Customer: Press remove from cart button\n3. UC: Removes item from cart in Customer's account\n\n    Alternate 1: Removes a specific quantity of an item from their cart.\n2. Customer changes quantity of item to be removed\n3. UC: Removes specified number of items from cart in Customer's account",
+					"documentation": "ID: Remove Item from Cart\nActors: Customer, Inventory Management System\nDescription: The customer removes an item to their cart.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Removes items from their cart. \n1. Customer: Enters cart \n2. Customer: Press remove from cart button\n3. UC: Removes item from cart in Customer's account\n\n    Alternate 1: Removes a specific quantity of an \n    item from their cart.\n2'. Customer changes quantity of item to be \n    removed\n3'. UC: Removes specified number of items from \n    cart in Customer's account",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -17407,7 +17407,7 @@
 									"visibility": "public"
 								}
 							],
-							"documentation": "ID: Request Purchase\nActors: Customer, IMS, SS\nDescription: a Customer requests to purchase an item/the items in their cart\nPriority: high\nRisk: high\nScenarios:\n   Main: a customer's purchase request is successfully fulfilled\n      1. Customer: Requests to purchase item(s) in cart\n      2. PFS: creates purchase order with status \"QUERY\", sent to IMS and SS\n      3. IMS: checks if all items are in stock\n      4. IMS: confirms all items are in stock\n      5. PFS: PO status updated to \"IN_STOCK\"\n      6. SS: sends shipping cost\n      7. PFS: PO updated with shipping cost\n      6. PFS: displays the shipping cost of the items and the total cost of the purchase\n      7. Customer: confirms purchase request\n      8. PFS: PO status updated to \"CONFIRMED\" \n      9. control passes to Confirm Purchase from Cart uc\n   Alternate 1: the requested item(s) are not in stock\n      4'. IMS: confirms that one or more items in the order are out of stock\n      5'. PFS: PO status updated to \"OUT_OF_STOCK\"\n      6'. PFS: Customer informed of out of stock items and asked to change order or cancel it\n   Alternate 2: user uses a valid coupon code\n      1''. Customer: Requests to purchase item(s) in cart and specifies a coupon code to use with order\n      2''. PFS: confirms valid coupon code\n      3''. PFS: PO created with discounted price and status \"QUERY\", sent to IMS and SS\n      4''. go to Main 3",
+							"documentation": "ID: Request Purchase\nActors: Customer, IMS, SS\nDescription: a Customer requests to purchase an item/the items in their cart\nPriority: high\nRisk: high\nScenarios:\n   Main: a customer's purchase request is successfully fulfilled\n      1. Customer: Requests to purchase item(s) in cart\n      2. PFS: creates purchase order with status \"QUERY\", sent to IMS and SS\n      3. IMS: checks if all items are in stock\n      4. IMS: confirms all items are in stock\n      5. PFS: PO status updated to \"IN_STOCK\"\n      6. SS: sends shipping cost\n      7. PFS: PO updated with shipping cost\n      6. PFS: displays the shipping cost of the items and the total cost of the purchase\n      7. Customer: confirms purchase request\n      8. PFS: PO status updated to \"CONFIRMED\" \n      9. control passes to Confirm Purchase from Cart uc\n\n   Alternate 1: the requested item(s) are not in stock\n      4'. IMS: confirms that one or more items in the order are out of stock\n      5'. PFS: PO status updated to \"OUT_OF_STOCK\"\n      6'. PFS: Customer informed of out of stock items and asked to change order or cancel it\n\n   Alternate 2: user uses a valid coupon code\n      1''. Customer: Requests to purchase item(s) in cart and specifies a coupon code to use with order\n      2''. PFS: confirms valid coupon code\n      3''. PFS: PO created with discounted price and status \"QUERY\", sent to IMS and SS\n      4''. go to Main 3",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -17583,7 +17583,7 @@
 									"isDerived": false
 								}
 							],
-							"documentation": "ID: Confirm Purchase From Cart\nActors: Customer, IMS, SS, Accounting\nDescription: Customer confirms the purchase of their items from the cart\nPriority: high\nRisk: high\nScenarios:\n   Main: Customer successfully confirms purchase of their cart\n      1. Customer: confirms purchase of their cart\n      2. PFS: checks customer's payment information\n      3. PFS: confirms payment info is correct\n      4. Accounting: generates invoice for purchase\n      5. PFS: displays invoice to Customer\n      6. Customer: pays with credit card\n      7. PFS: charge credit card\n      8. PFS: charge successful\n      9. PFS: PO status changed to \"PURCHASED\"\n      10. PFS: PO sent to IMS\n      11. IMS: shipping details sent to SS\n   Alternate 1: Customer's payment information is incorrect\n      3'. PFS: Customer's payment info is incorrect\n      4'. PFS: prompt Customer for correct payment info\n      5'. repeat until valid info supplied/order cancelled\n      6'. PFS: update Customer's account with valid info\n     7'. proceed to Main 3\n   Alternate 2: Customer's card is denied\n      8''. PFS: charge unsuccessful\n      9''. PFS: prompt Customer to use a different card\n      10''. repeat until charge goes through or purchase cancelled\n     11''. proceed to Main 8\n   Alternate 3: Customer cancels order\n      1'''. control passes to Cancel In-Progress Order uc",
+							"documentation": "ID: Confirm Purchase From Cart\nActors: Customer, IMS, SS, Accounting\nDescription: Customer confirms the purchase of their items from the cart\nPriority: high\nRisk: high\nScenarios:\n   Main: Customer successfully confirms purchase of their cart\n      1. Customer: confirms purchase of their cart\n      2. PFS: checks customer's payment information\n      3. PFS: confirms payment info is correct\n      4. Accounting: generates invoice for purchase\n      5. PFS: displays invoice to Customer\n      6. Customer: pays with credit card\n      7. PFS: charge credit card\n      8. PFS: charge successful\n      9. PFS: PO status changed to \"PURCHASED\"\n      10. PFS: PO sent to IMS\n      11. IMS: shipping details sent to SS\n\n   Alternate 1: Customer's payment information is incorrect\n      3'. PFS: Customer's payment info is incorrect\n      4'. PFS: prompt Customer for correct payment info\n      5'. repeat until valid info supplied/order cancelled\n      6'. PFS: update Customer's account with valid info\n     7'. proceed to Main 3\n\n   Alternate 2: Customer's card is denied\n      8''. PFS: charge unsuccessful\n      9''. PFS: prompt Customer to use a different card\n      10''. repeat until charge goes through or purchase cancelled\n     11''. proceed to Main 8\n\n   Alternate 3: Customer cancels order\n      1'''. control passes to Cancel In-Progress Order uc",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -17770,7 +17770,7 @@
 							"visibility": "public"
 						}
 					],
-					"documentation": "ID: Find PO Status\nActors: Customer, Service Agent, Shipping System\nDescription: The Customer or Service Agent requests for the Purchase Order status\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Requests for PO status\n1. Customer/Service Agent: Request status of Purchase Order\n2. UC: Sends request to the shipping system\n3. Shipping System: Returns Purchase Order to Purchase Fulfillment System\n4. UC: Displays requested Purchase Order to Customer/Service Agent",
+					"documentation": "ID: Find PO Status\nActors: Customer, Service Agent, Shipping System\nDescription: The Customer or Service Agent requests for the Purchase Order status\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Requests for PO status\n1. Customer/Service Agent: Request status of \n    Purchase Order\n2. UC: Sends request to the shipping system\n3. Shipping System: Returns Purchase Order to \n    Purchase Fulfillment System\n4. UC: Displays requested Purchase Order to \n    Customer/Service Agent",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -17799,7 +17799,7 @@
 							"visibility": "public"
 						}
 					],
-					"documentation": "ID: Find Invoice Status\nActors: Customer, Service Agent, Shipping System, Accounting System.\nDescription: The Customer or Service Agent requests for the invoice status\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Requests for invoice status.\n1. Customer/Service Agent: Request status of Invoice\n2. UC: Sends request to the shipping system\n3. Shipping System: Returns Invoice to Purchase Fulfillment System\n4. UC: Displays requested invoice to Customer/Service Agent",
+					"documentation": "ID: Find Invoice Status\nActors: Customer, Service Agent, Shipping System, Accounting System.\nDescription: The Customer or Service Agent requests for the invoice status\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Requests for invoice status.\n1. Customer/Service Agent: Request status of \n    Invoice\n2. UC: Sends request to the shipping system\n3. Shipping System: Returns Invoice to Purchase \n    Fulfillment System\n4. UC: Displays requested invoice to \n    Customer/Service Agent",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -23738,7 +23738,7 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "Edit Customer Account Information",
-					"documentation": "ID: Edit User Account Information\nActors: Customer\nDescription: The customer changes their account information.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Edit account information (i.e. username, email) successfully\n1. Customer: Enters account editing screen\n2. Customer: Changes account information\n3. Customer: Clicks save changes button\n4. UC: Checks if information is valid/taken\n5. UC: Saves changes to Customer account.\n\n    Alternate 2: Edit account information fails\n5. UC: Detects invalid information\n6. UC: Alerts Customer that information is invalid\n7. UC: Returns to editing page\n\n    Alternate 3: Edit Customer's Password successfully\n1. Customer: Enters account editing screen\n2. Customer: Enters in new password twice\n3. Customer: Clicks save changes button\n4. UC: Checks if new passwords are valid\n5. UC: Saves changes to Customer account\n\n    Alternate 4: Edit Customer's Password incorrectly\n5. UC: Detects invalidpassword\n6. UC: Saves changes to Customer account",
+					"documentation": "ID: Edit User Account Information\nActors: Customer\nDescription: The customer changes their account information.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Edit account information (i.e. username, email) successfully\n1. Customer: Enters account editing screen\n2. Customer: Changes account information\n3. Customer: Clicks save changes button\n4. UC: Checks if information is valid/taken\n5. UC: Saves changes to Customer account.\n\n    Alternate 1: Edit account information fails\n5'. UC: Detects invalid information\n6'. UC: Alerts Customer that information is invalid\n7'. UC: Returns to editing page\n\n    Alternate 2: Edit Customer's Password successfully\n1''. Customer: Enters account editing screen\n2''. Customer: Enters in new password twice\n3''. Customer: Clicks save changes button\n4''. UC: Checks if new passwords are valid\n5''. UC: Saves changes to Customer account\n\n    Alternate 3: Edit Customer's Password incorrectly\n5'''. UC: Detects invalid password\n6'''. UC: Saves changes to Customer account",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -23767,7 +23767,7 @@
 							"visibility": "public"
 						}
 					],
-					"documentation": "ID: Set Delivery Location\nActors: Customer\nDescription: The customer changes  their set delivery location/s.\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Edit a Delivery Location\n1. Customer: Enters Account editing screen\n2. Customer: Changes delivery location information\n3. Customer: Clicks save changes button\n4. UC: Saves changes to Customer's account\n\n    Alternate 1: Add Delivery Location\n2. Customer: Presses add delivery location button\n3. Customer: Enters delivery location\n4. Customer: Clicks save changes button\n5. UC: Saves changes to Customer's account\n\n    Alternate 2: Remove Delivery Location\n2. Customer: Presses remove delivery location button\n3. UC: Removes delivery location from Customer's Account\n\n    Alternate 3: Set Default Delivery Location\n2. Customer: Presses default checkmark box on delivery location\n3. UC: Saves changes to Customer's account",
+					"documentation": "ID: Set Delivery Location\nActors: Customer\nDescription: The customer changes  their set delivery location/s.\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Edit a Delivery Location\n1. Customer: Enters Account editing screen\n2. Customer: Changes delivery location information\n3. Customer: Clicks save changes button\n4. UC: Saves changes to Customer's account\n\n    Alternate 1: Add Delivery Location\n2'. Customer: Presses add delivery location button\n3'. Customer: Enters delivery location\n4'. Customer: Clicks save changes button\n5'. UC: Saves changes to Customer's account\n\n    Alternate 2: Remove Delivery Location\n2''. Customer: Presses remove delivery location button\n3''. UC: Removes delivery location from Customer's Account\n\n    Alternate 3: Set Default Delivery Location\n2'''. Customer: Presses default checkmark box on delivery location\n3'''. UC: Saves changes to Customer's account",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -23796,7 +23796,7 @@
 							"visibility": "public"
 						}
 					],
-					"documentation": "ID: Set Credit Card Information\nActors: Customer\nDescription: The customer changes their credit card information.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Edit credit card information successfully\n1. Customer: Enters Account editing screen\n2. Customer: Changes credit card information\n3. Customer: Clicks save button\n4. UC: 'Confirm Payment Information' use case\n5. UC: Saves changes to Customer's account\n\n    Alternate 1: Add credit card information\n2. Customer: Presses add credit card button\n3. Customer: Enters credit card information\n4. Customer: Clicks save button\n5. UC: 'Confirm Payment Information' use case\n6. UC: Saves changes to Customer's account\n\n    Alternate 2: Remove credit card information\n2. Customer: Presses remove credit card button\n3. UC: Removes credit card from Customer's Account\n\n    Alternate 3: Set credit card as default\n2. Customer: Presses default checkmark box on credit card\n3. UC: Saves changes to Customer's account",
+					"documentation": "ID: Set Credit Card Information\nActors: Customer\nDescription: The customer changes their credit card information.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Edit credit card information successfully\n1. Customer: Enters Account editing screen\n2. Customer: Changes credit card information\n3. Customer: Clicks save button\n4. UC: 'Confirm Payment Information' use case\n5. UC: Saves changes to Customer's account\n\n    Alternate 1: Add credit card information\n2'. Customer: Presses add credit card button\n3'. Customer: Enters credit card information\n4'. Customer: Clicks save button\n5'. UC: 'Confirm Payment Information' use case\n6'. UC: Saves changes to Customer's account\n\n    Alternate 2: Remove credit card information\n2''. Customer: Presses remove credit card button\n3''. UC: Removes credit card from Customer's Account\n\n    Alternate 3: Set credit card as default\n2'''. Customer: Presses default checkmark box on credit card\n3'''. UC: Saves changes to Customer's account",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
