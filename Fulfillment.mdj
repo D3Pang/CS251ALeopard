@@ -11070,6 +11070,7 @@
 							"isDerived": false
 						}
 					],
+					"documentation": "ID: Browse Items\nActors: Customer, IMS\nDescription: Customer browses product catalog\nPriority: high\nRisk: low\nScenarios:\n   Main: Customer browses products by category\n      1. Customer: chooses to browse product category\n      2. IMS: returns inventory of chosen category\n      3. PFS: displays all products in category\n   Alternate 1: Customer browses all products\n      1. Customer: chooses to browse all products\n      2. IMS: returns inventory of all products\n      3. PFS: displays all products",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -11129,6 +11130,7 @@
 							"isDerived": false
 						}
 					],
+					"documentation": "ID: Search Items\nActors: Customer, IMS\nDescription: Customer searches the catalog of products\nPriority: high\nRisk:  low\nScenarios:\n   Main: Customer searches catalog\n      1. Customer: enters search terms and filters for search, and how to sort results\n      2.  PFS: requests product info from IMS\n      3. IMS: returns product info including stocking status\n      4.  PFS: displays products that match search criteria and in requested order",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -16878,8 +16880,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 684,
-											"top": 514,
+											"left": 652,
+											"top": 615,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -16911,8 +16913,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 688,
-											"top": 499,
+											"left": 647,
+											"top": 601,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -16944,8 +16946,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 677,
-											"top": 543,
+											"left": 661,
+											"top": 644,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -16977,8 +16979,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 605,
-											"top": 494,
+											"left": 548,
+											"top": 650,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -17010,8 +17012,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 611,
-											"top": 482,
+											"left": 546,
+											"top": 637,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -17043,8 +17045,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 594,
-											"top": 520,
+											"left": 553,
+											"top": 677,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -17076,8 +17078,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 764,
-											"top": 534,
+											"left": 756,
+											"top": 581,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -17109,8 +17111,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 765,
-											"top": 520,
+											"left": 750,
+											"top": 569,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -17142,8 +17144,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 761,
-											"top": 561,
+											"left": 769,
+											"top": 605,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -17219,10 +17221,10 @@
 										"$ref": "AAAAAAFYcOiXA1UUFtI="
 									},
 									"tail": {
-										"$ref": "AAAAAAFYdElUAWGb5dY="
+										"$ref": "AAAAAAFYc8cXPzWdvls="
 									},
 									"lineStyle": 1,
-									"points": "577:509;786:561",
+									"points": "529:679;786:593",
 									"stereotypeDisplay": "label",
 									"showVisibility": true,
 									"showProperty": true,
@@ -17405,6 +17407,7 @@
 									"visibility": "public"
 								}
 							],
+							"documentation": "ID: Request Purchase\nActors: Customer, IMS, SS\nDescription: a Customer requests to purchase an item/the items in their cart\nPriority: high\nRisk: high\nScenarios:\n   Main: a customer's purchase request is successfully fulfilled\n      1. Customer: Requests to purchase item(s) in cart\n      2. PFS: creates purchase order with status \"QUERY\", sent to IMS and SS\n      3. IMS: checks if all items are in stock\n      4. IMS: confirms all items are in stock\n      5. PFS: PO status updated to \"IN_STOCK\"\n      6. SS: sends shipping cost\n      7. PFS: PO updated with shipping cost\n      6. PFS: displays the shipping cost of the items and the total cost of the purchase\n      7. Customer: confirms purchase request\n      8. PFS: PO status updated to \"CONFIRMED\" \n      9. control passes to Confirm Purchase from Cart uc\n   Alternate 1: the requested item(s) are not in stock\n      4'. IMS: confirms that one or more items in the order are out of stock\n      5'. PFS: PO status updated to \"OUT_OF_STOCK\"\n      6'. PFS: Customer informed of out of stock items and asked to change order or cancel it\n   Alternate 2: user uses a valid coupon code\n      1''. Customer: Requests to purchase item(s) in cart and specifies a coupon code to use with order\n      2''. PFS: confirms valid coupon code\n      3''. PFS: PO created with discounted price and status \"QUERY\", sent to IMS and SS\n      4''. go to Main 3",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -17417,6 +17420,7 @@
 								"$ref": "AAAAAAFYcLijgRxPvXQ="
 							},
 							"name": "Edit PO",
+							"documentation": "Description: A purchase order which has the cart, status, and delivery information is edited to be filled out with the correct information.\n",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -17429,6 +17433,7 @@
 								"$ref": "AAAAAAFYcLijgRxPvXQ="
 							},
 							"name": "Process Payment",
+							"documentation": "Description: Payment information such as the credit card number is sent over to accounting to confirm and process the payment.",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -17545,7 +17550,7 @@
 											"$ref": "AAAAAAFYdFK/UW63Gh0="
 										},
 										"reference": {
-											"$ref": "AAAAAAFYdElUAGGZEHs="
+											"$ref": "AAAAAAFYc8cXPjWbkM4="
 										},
 										"visibility": "public",
 										"navigable": false,
@@ -17578,6 +17583,7 @@
 									"isDerived": false
 								}
 							],
+							"documentation": "ID: Confirm Purchase From Cart\nActors: Customer, IMS, SS, Accounting\nDescription: Customer confirms the purchase of their items from the cart\nPriority: high\nRisk: high\nScenarios:\n   Main: Customer successfully confirms purchase of their cart\n      1. Customer: confirms purchase of their cart\n      2. PFS: checks customer's payment information\n      3. PFS: confirms payment info is correct\n      4. Accounting: generates invoice for purchase\n      5. PFS: displays invoice to Customer\n      6. Customer: pays with credit card\n      7. PFS: charge credit card\n      8. PFS: charge successful\n      9. PFS: PO status changed to \"PURCHASED\"\n      10. PFS: PO sent to IMS\n      11. IMS: shipping details sent to SS\n   Alternate 1: Customer's payment information is incorrect\n      3'. PFS: Customer's payment info is incorrect\n      4'. PFS: prompt Customer for correct payment info\n      5'. repeat until valid info supplied/order cancelled\n      6'. PFS: update Customer's account with valid info\n     7'. proceed to Main 3\n   Alternate 2: Customer's card is denied\n      8''. PFS: charge unsuccessful\n      9''. PFS: prompt Customer to use a different card\n      10''. repeat until charge goes through or purchase cancelled\n     11''. proceed to Main 8\n   Alternate 3: Customer cancels order\n      1'''. control passes to Cancel In-Progress Order uc",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -23528,6 +23534,7 @@
 									"visibility": "public"
 								}
 							],
+							"documentation": "ID: Cancel Transaction\nActors: Customer, IMS, Accounting\nDescription: Customer cancels a transaction\nPriority: high\nRisk: high\nScenarios:\n   Main: Customer cancels a transaction\n       1. Customer: cancels an in-progress transaction\n       2.  PFS: status of associated PO is updated to \"CANCELLED\"\n       3. PFS: user account updated with cancelled  order\n       5. PFS: cancelled PO sent to IMS\n       5. IMS: shipping cancelled and product returned to warehouse\n       6. Accounting: order invoice cancelled",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -23629,6 +23636,7 @@
 									"isDerived": false
 								}
 							],
+							"documentation": "ID: Cancel In-Progress Order\nActors: Service Agent, SS, Accounting\nDescription: An in-progress order is cancelled by a Service Agent\nPriority: high\nRisk: high\nScenarios:\n   Main: order successfully canceled\n      1. Service Agent: views and cancels an in-progress order\n      2. PFS: the purchase order status is set to \"CANCELLED\"\n      3. PFS: the associated Customer's user account is updated to show the cancelled order\n      4. SS: shipping order cancelled and product returned to inventory\n      5. Service Agent: refund the order's invoice\n      6. Accounting: update logs with the cancelled order",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -23700,12 +23708,14 @@
 									"isDerived": false
 								}
 							],
+							"documentation": "Description: an invoice is refunded",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
 							"isLeaf": false
 						}
 					],
+					"documentation": "Description:",
 					"visibility": "public"
 				},
 				{
@@ -23715,6 +23725,7 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "Update Customer Account",
+					"documentation": "Description: the details of a customer's account are modified",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
