@@ -32,12 +32,26 @@
 			.tip {
 				font-style: italic;
 				color: #999;
+				font-size: 13px;
 			}
 			ul ul li {
 				color :#999;
+				font-size: 13px;
 			}
 			.head {
 				padding-left: 20px;
+			}
+			div > ul {
+				list-style: none;
+			}
+			div > ul > li:before {
+				content: "\00BB \0020";
+			}
+			div > ul > li.out:before {
+				content: "\00AB \0020";
+			}
+			ul ul li {
+				padding-bottom: 20px;
 			}
 		</style>
 	</head>
@@ -72,32 +86,40 @@
 					<li>searchItem(String str):Item[]</li>
 						<ul><li>Search for particular item in Inventory</li></ul>
 					<li>confirmAvailability (PurchaseOrder PO):Boolean</li>
-						<ul><li>checks availability of a particular item</li></ul>
+						<ul><li>checks availability of a particular item and updates PO status to IN_STOCK or OUT_OF_STOCK</li></ul>
 					<li>cancelPurchase(PurchaseOrder PO):void</li>
-						<ul><li>cancel purchase and return item(s) may be returned back to warehouse</li></ul>
+						<ul><li>cancel purchase and return item(s) back to warehouse</li></ul>
 					<li>fulfillOrder(PurchaseOrder PO):void</li>
 						<ul><li>Update inventory (if required) and initiate fulfillment and delivery</li></ul>
-				</ul>
 			</div>
 			<div>
 				<h3>Shipping</h3>
 				<ul>
-					<li>getShippingCost(PurchaseOrder PO):Float</li>
-						<ul><li>Return actual cost of the item(s)</li></ul>
+					<li>getShippingOptions(PurchaseOrder PO):ShippingOptions[]</li>
+						<ul><li>Return a list of Shipping Options like:<br>
+						 <span style='font-size: 12px'>[{"type": "One-day shipping", "cost": "23.99", "est delivery date": "2016/12/10"},<br>
+						 {"type": "Standard shipping", "cost": "5.99", "est delivery date": "2016/12/30"}]
+						 </span>
+						</li></ul>
+					<li>cancelOrder(PurchaseOrder PO):void</li>
+						<ul><li>cancel an order</li></ul>
 				</ul>
 				<ul>
-					<li><sup>#</sup> updatePOStatus(double POId):OrderStatus</li>
+					<li class="out"> updatePOStatus(double POId):OrderStatus</li>
 						<ul><li>Called by Shipping to update PO Status in Fulfillment</li></ul>
-					<li><sup>#</sup> updateInvoiceStatus(double invId):InvoiceStatus</li>
-						<ul><li>Called by Shipping to update Invoice Status in Fulfillment</li></ul>
+					
 				</ul>
-				<p class='tip'><sup>#</sup> Methods exposed by our system for Shipping System</p>
+				<div class=''><ul><li class="out tip"> Methods exposed by Fulfillment for Shipping System</li></ul></div>
 			</div>
 			<div>
 				<h3>Accounting</h3>
 				<ul>
 					<li>updatePayment(PurchaseOrder PO, CreditCard cc):void</li>
-					<li>refundInvoice(Invoice inv):void</li>
+					<ul><li>also marks the invoice status as paid</li></ul>
+					<li>refundInvoice(String invId):Boolean</li>
+					<ul><li>processes refunds. Returns 'true' if process successfully initiated</li></ul>
+					<li>getInvoiceStatus(String invId):Invoice</li>
+					<ul><li>also marks the invoice status as paid</li></ul>
 				</ul>
 			</div>
 		</div>
