@@ -11571,7 +11571,7 @@
 							"visibility": "public"
 						}
 					],
-					"documentation": "ID: Add Items to Cart\nActors: Customer, Inventory Management System\nDescription: The customer adds an item to their cart.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Adds item to their cart. (don't forget to \n    include quantity)\n1. Customer: Looks through inventory\n2. Customer: Press add to cart button\n3. UC: Add items to cart in Customer's account",
+					"documentation": "ID: Add Items to Cart\nActors: Customer\nDescription: The customer adds an item to their cart.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Adds item to their cart. (don't forget to \n    include quantity)\n1. Customer: Looks through inventory\n2. Customer: Press add to cart button\n3. UC: Add items to cart in Customer's account",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -11600,7 +11600,7 @@
 							"visibility": "public"
 						}
 					],
-					"documentation": "ID: Remove Item from Cart\nActors: Customer, Inventory Management System\nDescription: The customer removes an item to their cart.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Removes items from their cart. \n1. Customer: Enters cart \n2. Customer: Press remove from cart button\n3. UC: Removes item from cart in Customer's account\n\n    Alternate 1: Removes a specific quantity of an \n    item from their cart.\n2'. Customer changes quantity of item to be \n    removed\n3'. UC: Removes specified number of items from \n    cart in Customer's account",
+					"documentation": "ID: Remove Item from Cart\nActors: Customer\nDescription: The customer removes an item to their cart.\nPriority: High\nRisk: Low\nScenarios:\n    Main: Removes items from their cart. \n1. Customer: Enters cart \n2. Customer: Press remove from cart button\n3. UC: Removes item from cart in Customer's account\n\n    Alternate 1: Removes a specific quantity of an \n    item from their cart.\n2'. Customer changes quantity of item to be \n    removed\n3'. UC: Removes specified number of items from \n    cart in Customer's account",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -18153,7 +18153,7 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "Inquire Status",
-					"documentation": "ID: Inquire Status\nActors: Customer, Service Agent, Shipping System\nDescription: The Customer or Service Agent requests for statuses \nPriority: High\nRisk: Medium\n",
+					"documentation": "\n",
 					"visibility": "public",
 					"isAbstract": true,
 					"isFinalSpecialization": false,
@@ -18182,7 +18182,7 @@
 							"visibility": "public"
 						}
 					],
-					"documentation": "ID: Find PO Status\nActors: Customer, Service Agent, Shipping System\nDescription: The Customer or Service Agent requests for the Purchase Order status\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Requests for PO status\n1. Customer/Service Agent: Request status of \n    Purchase Order\n2. UC: Sends request to the shipping system\n3. Shipping System: Returns Purchase Order to \n    Purchase Fulfillment System\n4. UC: Displays requested Purchase Order to \n    Customer/Service Agent",
+					"documentation": "ID: Find PO Status\nActors: Customer, Service Agent\nDescription: The Customer or Service Agent requests for the Purchase Order status\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Requests for PO status\n1. Customer/Service Agent: Request status of \n    Purchase Order\n2. UC: Sends request to the shipping system\n3. Shipping System: Returns Purchase Order to \n    Purchase Fulfillment System\n4. UC: Displays requested Purchase Order to \n    Customer/Service Agent",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
@@ -18256,7 +18256,7 @@
 							"isDerived": false
 						}
 					],
-					"documentation": "ID: Find Invoice Status\nActors: Customer, Service Agent, Shipping System, Accounting System.\nDescription: The Customer or Service Agent requests for the invoice status\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Requests for invoice status.\n1. Customer/Service Agent: Request status of \n    Invoice\n2. UC: Sends request to the shipping system\n3. Shipping System: Returns Invoice to Purchase \n    Fulfillment System\n4. UC: Displays requested invoice to \n    Customer/Service Agent",
+					"documentation": "ID: Find Invoice Status\nActors: Customer, Service , Shipping SystemAgent Accounting\nDescription: The Customer or Service Agent requests for the invoice status from Accounting\nPriority: High\nRisk: Medium\nScenarios:\n    Main: Requests for invoice status.\n1. Customer/Service Agent: Request status of \n    Invoice\n2. UC: Sends request to the shipping system\n3. Shipping System: Returns Invoice to Purchase \n    Fulfillment System\n4. UC: Displays requested invoice to \n    Customer/Service Agent",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
