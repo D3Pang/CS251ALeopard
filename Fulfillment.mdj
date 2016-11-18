@@ -17407,7 +17407,7 @@
 									"visibility": "public"
 								}
 							],
-							"documentation": "ID: Request Cart Purchase\nActors: Customer, IMS, SS\nDescription: a Customer requests to purchase an item/the items in their cart\nPriority: high\nRisk: high\nScenarios:\n   Main: a customer's purchase request is successfully fulfilled\n      1. Customer: Requests to purchase item(s) in cart\n      2. PFS: creates purchase order with status \"QUERY\", sent to IMS and SS\n      3. IMS: checks if all items are in stock\n      4. IMS: confirms all items are in stock\n      5. PFS: PO status updated to \"IN_STOCK\"\n      6. SS: sends shipping cost\n      7. PFS: PO updated with shipping cost\n      6. PFS: displays the shipping cost of the items and the total cost of the purchase\n   Alternate 1: the requested item(s) are not in stock\n      4'. IMS: confirms that one or more items in the order are out of stock\n      5'. PFS: PO status updated to \"OUT_OF_STOCK\"\n      6'. PFS: Customer informed of out of stock items and asked to change order or cancel it\n   Alternate 2: user uses a valid coupon code\n      1''. Customer: Requests to purchase item(s) in cart and specifies a coupon code to use with order\n      2''. PFS: confirms valid coupon code\n      3''. PFS: PO created with discounted price and status \"QUERY\", sent to IMS and SS\n      4''. go to Main 3",
+							"documentation": "ID: Request Cart Purchase\nActors: Customer, IMS, SS\nDescription: a Customer requests to purchase an item/the items in their cart\nPriority: high\nRisk: high\nScenarios:\n   Main: a customer's purchase request is successfully fulfilled\n      1. Customer: Requests to purchase item(s) in cart\n      2. PFS: creates purchase order with status \"QUERY\", sent to IMS and SS\n      3. IMS: checks if all items are in stock\n      4. IMS: confirms all items are in stock\n      5. PFS: PO status updated to \"IN_STOCK\"\n      6. SS: sends shipping cost\n      7. PFS: PO updated with shipping cost\n      6. PFS: displays the shipping cost of the items and the total cost of the purchase\n   Alternate 1: the requested item(s) are not in stock\n      4'. IMS: confirms that one or more items in the order are out of stock\n      5'. PFS: PO status updated to \"OUT_OF_STOCK\"\n      6'. PFS: Customer informed of out of stock items and asked to change order or cancel it\n   Alternate 2: user uses a valid coupon code\n      1'. Customer: Requests to purchase item(s) in cart and specifies a coupon code to use with order\n      2'. PFS: confirms valid coupon code\n      3'. PFS: PO created with discounted price and status \"QUERY\", sent to IMS and SS, continue to Main 3",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -23709,7 +23709,7 @@
 									"isDerived": false
 								}
 							],
-							"documentation": "Description: an invoice is refunded",
+							"documentation": "Description: The invoice of a cancelled order is sent to Accounting to be refunded.",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
