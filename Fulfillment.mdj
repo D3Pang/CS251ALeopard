@@ -9619,9 +9619,9 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 595.5,
-											"top": 177,
+											"top": 183.5,
 											"width": 98,
-											"height": 39,
+											"height": 26,
 											"autoResize": false,
 											"underline": false,
 											"text": "Edit Credit Card Information",
@@ -9691,9 +9691,9 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 590.5,
-									"top": 170,
+									"top": 176.5,
 									"width": 108,
-									"height": 51,
+									"height": 38,
 									"autoResize": false,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFYdEdQN1wrm30="
@@ -34107,7 +34107,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "DeliverySpeed",
+											"text": "ShippingSpeed",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -41806,29 +41806,6 @@
 							}
 						},
 						{
-							"_type": "UMLNoteView",
-							"_id": "AAAAAAFYsymaGxYzeUI=",
-							"_parent": {
-								"$ref": "AAAAAAFYk8bf09V0hqU="
-							},
-							"visible": true,
-							"enabled": true,
-							"lineColor": "#000000",
-							"fillColor": "#ffffff",
-							"fontColor": "#000000",
-							"font": "Arial;13;0",
-							"showShadow": true,
-							"containerChangeable": false,
-							"containerExtending": false,
-							"left": 192,
-							"top": 1432,
-							"width": 78,
-							"height": 40,
-							"autoResize": false,
-							"text": "Delivery Interface?",
-							"wordWrap": true
-						},
-						{
 							"_type": "UMLAssociationView",
 							"_id": "AAAAAAFYsy38PJjzKX0=",
 							"_parent": {
@@ -45847,13 +45824,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 378,
-									"top": 1303,
+									"left": 422,
+									"top": 1319,
 									"width": 100.81982421875,
 									"height": 13,
 									"autoResize": false,
-									"alpha": -0.5235987755982988,
-									"distance": 30,
+									"alpha": -1.4052412465972557,
+									"distance": 60.67124524847005,
 									"hostEdge": {
 										"$ref": "AAAAAAFYs/9fl2UNx/0="
 									},
@@ -71979,7 +71956,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFYpFQ6ribx3j8="
 					},
-					"name": "DeliverySpeed",
+					"name": "ShippingSpeed",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,
