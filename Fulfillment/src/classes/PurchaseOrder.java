@@ -1,6 +1,7 @@
 package classes;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import roles.Recipient;
 import values.Money;
@@ -93,8 +94,13 @@ public class PurchaseOrder {
 		this.recipient = recipient;
 	}
 
-	public Money calculateTotalCost(){
-		return null;
+	public float calculateTotalCost(){
+		float total = 0.0f;
+		HashMap<Product, Integer> products = this.purchaseCart.getProductsAndQuantities();
+		for(Product p: products.keySet()){
+			total += p.getPrice() * (float)products.get(p);
+		}
+		return total;
 	}
 	
 	public boolean isCartValid()
