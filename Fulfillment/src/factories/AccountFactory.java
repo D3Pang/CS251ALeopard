@@ -56,13 +56,6 @@ public class AccountFactory implements IAccountFactory {
          */
         private int expYear;
 
-        /**
-         * @param amount
-         */
-        public void charge(Money amount) {
-            Accounting.sendInvoice();
-        }
-
 		public int getNumber() {
 			return number;
 		}
@@ -94,6 +87,22 @@ public class AccountFactory implements IAccountFactory {
 	public ITelephone makePhoneNumber(String areaCode, String number,
 			String extension, String contryCode) {
 		return new Telephone(areaCode, number, extension, contryCode);
+	}
+
+	public Telephone getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(Telephone phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 }
