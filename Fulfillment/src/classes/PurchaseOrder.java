@@ -18,6 +18,20 @@ public class PurchaseOrder {
 	private Cart purchaseCart;
 	private Recipient recipient;
 	
+	public PurchaseOrder(){
+		POID = "";
+		invoiceID = "";
+		shipmentID = "";
+		status = null;
+		coupons = new ArrayList<Coupon>();
+		purchaseCart = new Cart();
+		recipient = new Recipient();
+	}
+	
+	public PurchaseOrder(Cart c){
+		purchaseCart = c;
+	}
+	
 	public PurchaseOrder(String pOID, String invoiceID, String shipmentID,
 			POStatus status, ArrayList<Coupon> coupons,
 			 Cart purchaseCart,
