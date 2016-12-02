@@ -107,6 +107,14 @@ public class PurchaseOrder {
 			int quantity = q.getQuantity();
 			totalAmount += price + (price * tax / 100) * quantity;
 		}
+		for(Coupon c : coupons){
+			if(c.isPercentageOffer()){
+				totalAmount *= (1.0f - c.getCouponValue());
+			}
+			else{
+				totalAmount -= c.getCouponValue();
+			}
+		}
 		return new Money(totalAmount, Currency.USD);
 	}
 	
