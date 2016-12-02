@@ -6,7 +6,6 @@ import java.util.Set;
 
 import classes.Product;
 import classes.PurchaseOrder;
-import classes.Quantity;
 import values.Money;
 import values.Currency;
 /**
@@ -68,9 +67,9 @@ public final class Inventory {
 		return matches;
 	}
 	public boolean confirmAvailability(PurchaseOrder po) {
-		Set<Quantity> cart = po.getPurchaseCart().getProducts();
-		for(Quantity qty : cart) {
-			if(!qty.getProduct().isInStock()) {
+		Set<Product> cart = po.getPurchaseCart().getProducts();
+		for(Product product : cart) {
+			if(!product.isInStock()) {
 				return false;
 			}
 		}

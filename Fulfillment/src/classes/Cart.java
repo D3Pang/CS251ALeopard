@@ -1,19 +1,51 @@
 package classes;
 
+import java.util.HashMap;
 import java.util.Set;
 
 public class Cart {
-	private Set<Quantity> products;
+	private HashMap<Product, Integer> products;
 	
-	public Cart(Set<Quantity> products){
+	public Cart(HashMap<Product, Integer> products){
 		this.products = products;
 	}
 	
-	public void add(Product p, int q){
-		products.add(new Quantity(p, q));
+	public Set<Product> getProducts(){
+		return this.products.keySet();
 	}
-
-	public Set<Quantity> getProducts() {
-		return products;
+	
+	public HashMap<Product, Integer> getProductsAndQuantities(){
+		return this.products;
+	}
+	
+	public void addItem(Product p){
+		if(products.containsKey(p)){
+			Integer q = products.get(p);
+			q++;
+		}
+		else this.products.put(p, 1);
+	}
+	
+	public void addQuantity(Product p, int q){
+		if(products.containsKey(p)){
+			Integer qu = products.get(p);
+			qu += q;
+		}
+		else this.products.put(p, q);
+	}
+	
+	public boolean removeItem(Product p){
+		Integer removed = products.remove(p);
+		return !(removed.equals(null));
+	}
+	
+	public boolean removeQuantity(Product p, int q){
+		if(products.containsKey(p)){
+			Integer qu = products.get(p);
+			qu -= q;
+			if(qu <= 0) removeItem(p);
+			return true;
+		}
+		else return false;
 	}
 }

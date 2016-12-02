@@ -24,13 +24,9 @@ public class Product {
 	}
 	public String getProductDesc() {
 		return desc;
-	}
+	}	
 	public Money getPrice(){
-		//return price.addTax(tax);
-		return price;
-	}
-	public float getTax() {
-		return tax;
+		return price.addTax(tax);
 	}
 	public boolean isInStock() {
 		return inStock;

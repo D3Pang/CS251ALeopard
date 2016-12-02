@@ -1,7 +1,5 @@
 package roles;
 
-public class ServiceAgent {
-	public ServiceAgent() {
-		
-	}
+public class ServiceAgent extends Person {
+
 }
