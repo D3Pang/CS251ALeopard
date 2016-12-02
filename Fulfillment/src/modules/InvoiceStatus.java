@@ -1,4 +1,4 @@
-package classes;
+package modules;
 
 public enum InvoiceStatus {
 	PAID,

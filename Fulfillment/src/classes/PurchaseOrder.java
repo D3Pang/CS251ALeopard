@@ -18,8 +18,8 @@ public class PurchaseOrder {
 	private Cart purchaseCart;
 	private Recipient recipient;
 	
-	public PurchaseOrder(){
-		POID = "";
+	public PurchaseOrder(String POId){
+		POID = POId;
 		invoiceID = "";
 		shipmentID = "";
 		status = null;
@@ -48,11 +48,7 @@ public class PurchaseOrder {
 	public String getPOID() {
 		return POID;
 	}
-
-	public void setPOID(String pOID) {
-		POID = pOID;
-	}
-
+	
 	public String getInvoiceID() {
 		return invoiceID;
 	}
@@ -101,7 +97,7 @@ public class PurchaseOrder {
 		this.recipient = recipient;
 	}
 
-	public Money calculateTotalCost(){
+	public Money calculateTotalCost(){	//	Calculate coupon discounts
 		double totalAmount = 0.00;
 		Set<Quantity> products = this.purchaseCart.getProducts();
 		for(Quantity q: products){

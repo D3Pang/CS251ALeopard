@@ -9,6 +9,8 @@ import factories.IAccountFactory;
 import factories.IAddress;
 import factories.ICreditCard;
 import factories.ITelephone;
+import modules.Accounting;
+import modules.Fulfillment;
 import modules.Inventory;
 
 /**
@@ -17,7 +19,7 @@ import modules.Inventory;
 public class CustomerAccount {
 
   
-
+	private Fulfillment mFulfillment = Fulfillment.getInstance();
     /**
      * A unique identification for our PFS system to identify an account with
      */
@@ -80,7 +82,7 @@ public class CustomerAccount {
     private Set<IAddress> deliveryAddress;
     
     
-
+    private Accounting mAccounting = Accounting.getInstance();
     /**
      * A constructor for CustomerAccount to generate a mock customer account
      */
@@ -112,11 +114,11 @@ public class CustomerAccount {
      */
     private Boolean purchaseCart() {
         	//TODO Need to send a request to IMS to check on products
-        	PurchaseOrder po = new PurchaseOrder();
-        	po.setPOID("purchase1");
+        	PurchaseOrder po = mFulfillment.generatePurchaseOrder();
+        	
+        	// When we send PurchaseOrder to Accounting to generate corresponding invoice, it calls the setInvoiceId method on the PurchaseOrder instance
         	po.setInvoiceID("invoice1");
         	po.setShipmentID("shipement1");
-        	po.setStatus(POStatus.QUERY);
         	po.setCoupons(coupons);
         	po.setPurchaseCart(shoppingCart);
         	Recipient recipient = new Recipient();
@@ -170,8 +172,9 @@ public class CustomerAccount {
     				ccIndex = creditCards.indexOf(card);
     			}
     			validResponse = true;
-    			System.out.println(Accounting.generateInvoice(po).toString());
-    			Accounting.processPayment(creditCards.get(ccIndex));
+    			String invId = mAccounting.generateInvoice(this.customerID, po);
+    			System.out.println(invId);
+    			mAccounting.processPayment(invId, creditCards.get(ccIndex));
     			return true;
     			
     			}

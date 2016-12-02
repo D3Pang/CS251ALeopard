@@ -10,13 +10,15 @@ import classes.Quantity;
 import values.Money;
 import values.Currency;
 /**
- * @author Vikram
  * Singleton Inventory that will act as an adapter between Fulfillment & IMS (to be implemented by IMS).
  */
-public final class Inventory {
+public final class Inventory implements IInventory {
 
+	// Attributes, maybe used for paginating search and browse inventory results 
 	private int index = 0;
 	private static final int PAGE_SIZE = 10;
+	
+	
 	private List<Product> products;
 	/**
 	 * 

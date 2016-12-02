@@ -1,5 +1,7 @@
 package classes;
 
+import modules.Invoice;
+
 public class DBUtils {
 	
 	public static PurchaseOrder getPO(String POID){

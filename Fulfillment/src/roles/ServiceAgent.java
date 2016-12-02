@@ -1,24 +1,28 @@
 package roles;
 import java.util.*;
 
+import classes.POStatus;
+import classes.PurchaseOrder;
+import modules.Accounting;
+import modules.Fulfillment;
+
 public class ServiceAgent {
 	private Person person;
 	
-	
+	private Accounting mAccounting;
+	private Fulfillment mFulfillment;
     public ServiceAgent() {
-    	
+    	mAccounting = Accounting.getInstance();
+    	mFulfillment = Fulfillment.getInstance();
     }
 
     private void cancelPO(String POID) {
-        PurchaseOrder order = DBUtils.getPO(POID);
+        PurchaseOrder order = mFulfillment.getPurchaseOrderById(POID);
     	order.setStatus(POStatus.CANCELLED);
-    	DBUtils.savePO(POID);
     }
 
     private void refundInvoice(String invoiceID) {
-    	Invoice invoice = DBUtils.getInvoice(invoiceID);
-    	invoice.setStatus(InvoiceStatus.REFUNDED);
-    	DBUtils.savePO(invoiceID);
+    	mAccounting.refundInvoice(invoiceID, this);
     }
 
 	public Person getPerson() {
