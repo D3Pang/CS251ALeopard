@@ -3,25 +3,32 @@ package references;
 import factories.ICreditCard;
 
 public class CreditCard implements ICreditCard{
+	private int number;
+	private int cvvNumber;
+	private int expMonth;
+	private int expYear;
+	
+	public CreditCard(int number, int cvvNumber, int expMonth, int expYear) {
+		this.number = number;
+		this.cvvNumber = cvvNumber;
+		this.expMonth = expMonth;
+		this.expYear = expYear;
+	}
 
 	public int getNumber() {
-		// TODO Auto-generated method stub
-		return 0;
+		return number;
 	}
 
 	public int getCvvNumber() {
-		// TODO Auto-generated method stub
-		return 0;
+		return cvvNumber;
 	}
 
 	public int getExpMonth() {
-		// TODO Auto-generated method stub
-		return 0;
+		return expMonth;
 	}
 
 	public int getExpYear() {
-		// TODO Auto-generated method stub
-		return 0;
+		return expYear;
 	}
 
 }

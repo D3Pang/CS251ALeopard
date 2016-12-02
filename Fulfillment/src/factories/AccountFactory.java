@@ -5,21 +5,12 @@ import values.Telephone;
 
 public class AccountFactory implements IAccountFactory {
 
-    /**
-     * Default constructor
-     */
  //   public AccountFactory() {
  //   }
 
-    /**
-     * 
-     */
-    private Telephone phoneNumber;
+ //   private Telephone phoneNumber;
 
-    /**
-     * 
-     */
-    private Address address;
+//    private Address address;
 
     /**
      * 
@@ -88,21 +79,4 @@ public class AccountFactory implements IAccountFactory {
 			String extension, String contryCode) {
 		return new Telephone(areaCode, number, extension, contryCode);
 	}
-
-	public Telephone getPhoneNumber() {
-		return phoneNumber;
-	}
-
-	public void setPhoneNumber(Telephone phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-
-	public Address getAddress() {
-		return address;
-	}
-
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-
 }
