@@ -1,5 +1,5 @@
 package classes;
 
 public enum POStatus {
-
+	QUERY, IN_STOCK, OUT_OF_STOCK, CONFIRMED, CANCELLED, PURCHASED, SHIPPED;
 }
