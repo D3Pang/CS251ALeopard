@@ -2,6 +2,7 @@ package modules;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import classes.Product;
 import classes.PurchaseOrder;
@@ -66,7 +67,7 @@ public final class Inventory {
 		return matches;
 	}
 	public boolean confirmAvailability(PurchaseOrder po) {
-		List<Product> cart = po.getProductsInCart();
+		Set<Product> cart = po.getPurchaseCart().getProducts();
 		for(Product product : cart) {
 			if(!product.isInStock()) {
 				return false;

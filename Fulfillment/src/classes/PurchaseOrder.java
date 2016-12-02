@@ -3,6 +3,7 @@ package classes;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import modules.ShippingMethod;
 import roles.Recipient;
 import values.Money;
 
@@ -98,7 +99,7 @@ public class PurchaseOrder {
 		float total = 0.0f;
 		HashMap<Product, Integer> products = this.purchaseCart.getProductsAndQuantities();
 		for(Product p: products.keySet()){
-			total += p.getPrice() * (float)products.get(p);
+			total += p.getPrice().getAmount() * (float)products.get(p);
 		}
 		return total;
 	}
@@ -107,7 +108,7 @@ public class PurchaseOrder {
 	{
 		boolean isValid = true;
 		for(Product p: this.purchaseCart.getProducts()){
-			if(!p.getInStock()){
+			if(!p.isInStock()){
 				isValid = false; 
 				break;
 			}
