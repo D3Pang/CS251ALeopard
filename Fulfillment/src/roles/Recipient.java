@@ -10,6 +10,11 @@ public class Recipient{
 		this.person = person;
 		this.contactNo = contactNo;
 	}
+	public Recipient() {
+		// TODO Auto-generated constructor stub
+		person = null;
+		contactNo = null;
+	}
 	public Person getPerson() {
 		return person;
 	}
