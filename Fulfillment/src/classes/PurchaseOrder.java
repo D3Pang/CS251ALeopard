@@ -1,9 +1,10 @@
 package classes;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Set;
 
 import roles.Recipient;
+import values.Currency;
 import values.Money;
 
 public class PurchaseOrder {
@@ -12,20 +13,18 @@ public class PurchaseOrder {
 	private String shipmentID;
 	private POStatus status;
 	private ArrayList<Coupon> coupons;
-	private ArrayList<ShippingMethod> shippingOptions;
 	private Cart purchaseCart;
 	private Recipient recipient;
 	
 	public PurchaseOrder(String pOID, String invoiceID, String shipmentID,
 			POStatus status, ArrayList<Coupon> coupons,
-			ArrayList<ShippingMethod> shippingOptions, Cart purchaseCart,
+			 Cart purchaseCart,
 			Recipient recipient) {
 		POID = pOID;
 		this.invoiceID = invoiceID;
 		this.shipmentID = shipmentID;
 		this.status = status;
 		this.coupons = coupons;
-		this.shippingOptions = shippingOptions;
 		this.purchaseCart = purchaseCart;
 		this.recipient = recipient;
 	}
@@ -70,14 +69,6 @@ public class PurchaseOrder {
 		this.coupons = coupons;
 	}
 
-	public ArrayList<ShippingMethod> getShippingOptions() {
-		return shippingOptions;
-	}
-
-	public void setShippingOptions(ArrayList<ShippingMethod> shippingOptions) {
-		this.shippingOptions = shippingOptions;
-	}
-
 	public Cart getPurchaseCart() {
 		return purchaseCart;
 	}
@@ -94,20 +85,24 @@ public class PurchaseOrder {
 		this.recipient = recipient;
 	}
 
-	public float calculateTotalCost(){
-		float total = 0.0f;
-		HashMap<Product, Integer> products = this.purchaseCart.getProductsAndQuantities();
-		for(Product p: products.keySet()){
-			total += p.getPrice() * (float)products.get(p);
+	public Money calculateTotalCost(){
+		double totalAmount = 0.00;
+		Set<Quantity> products = this.purchaseCart.getProducts();
+		for(Quantity q: products){
+			Product product = q.getProduct();
+			double price = product.getPrice().getAmount();
+			float tax = product.getTax();
+			int quantity = q.getQuantity();
+			totalAmount += price + (price * tax / 100) * quantity;
 		}
-		return total;
+		return new Money(totalAmount, Currency.USD);
 	}
 	
 	public boolean isCartValid()
 	{
 		boolean isValid = true;
-		for(Product p: this.purchaseCart.getProducts()){
-			if(!p.getInStock()){
+		for(Quantity q: this.purchaseCart.getProducts()){
+			if(!q.getProduct().isInStock()){
 				isValid = false; 
 				break;
 			}
