@@ -1,5 +1,5 @@
 package roles;
 
-public class Customer extends Person {
+public class Customer {
 
 }
