@@ -1,6 +1,12 @@
 package roles;
 import java.util.*;
 
+import classes.DBUtils;
+import classes.Invoice;
+import classes.InvoiceStatus;
+import classes.POStatus;
+import classes.PurchaseOrder;
+
 public class ServiceAgent {
 	private Person person;
 	
