@@ -1,6 +1,4 @@
 package roles;
-import java.util.*;
-
 import classes.POStatus;
 import classes.PurchaseOrder;
 import modules.Accounting;
@@ -11,7 +9,8 @@ public class ServiceAgent {
 	
 	private Accounting mAccounting;
 	private Fulfillment mFulfillment;
-    public ServiceAgent() {
+
+	public ServiceAgent() {
     	mAccounting = Accounting.getInstance();
     	mFulfillment = Fulfillment.getInstance();
     }
@@ -32,6 +31,5 @@ public class ServiceAgent {
 	public void setPerson(Person person) {
 		this.person = person;
 	}
-    
-
+   
 }

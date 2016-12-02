@@ -24,62 +24,131 @@ public class CustomerAccount {
      * A unique identification for our PFS system to identify an account with
      */
     private String customerID;
+    public String getCustomerID() {
+    	return customerID;
+    }
 
     /**
      * A unique username that the customer chooses to represent their account. 
      * It can be changed by the customer to another unique username
      */
     private String username;
+    public String getUsername() {
+		return username;
+	}
+	public void setUserName(String username) {
+		this.username = username;
+	}
 
     /**
      * The listed first name that the customer inputs for the account.
      */
     private String firstName;
+    
+    public String getFirstName() {
+		return firstName;
+	}
+    
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
     /**
      * The listed last name that the customer inputs for the account.
      */
     private String lastName;
+    
+    public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
     /**
      * The email that the customer registers the account with.
      */
     private String emailID;
+    public String getEmailID() {
+		return emailID;
+	}
+	public void setEmailID(String emailID) {
+		this.emailID = emailID;
+	}
 
     /**
      * A list of invoice IDs to allow the customer to browse past invoices made on this account.
      */
     private ArrayList<String> invoiceHistory;
+    public ArrayList<String> getInvoiceHistory() {
+    	return invoiceHistory;
+    }
+    public void addInvoice(String invoiceID) {
+    	invoiceHistory.add(invoiceID);
+    }
 
     /**
      * The credit card/s that the customer have added to their account.
      */
     private ArrayList<ICreditCard> creditCards;
+    public ArrayList<ICreditCard> getcreditCards() {
+    	return creditCards;
+    }
+    public void addCC(ICreditCard card) {
+    	creditCards.add(card);
+    }
 
     /**
      * The phone number/s that the customer have added to their account.
      */
     private ArrayList<ITelephone> phoneNumbers;
+    public ArrayList<ITelephone> getphoneNumbers() {
+    	return phoneNumbers;
+    }
+    public void addTelephone(ITelephone phone) {
+    	phoneNumbers.add(phone);
+    }
 
     /**
      * The coupon/s that the customer have added to their account.
      */
     private ArrayList<Coupon> coupons;
+    public ArrayList<Coupon> getCoupons() {
+    	return coupons;
+    }
+    public void addCoupon(Coupon coupon) {
+    	coupons.add(coupon);
+    }
 
     /**
      * The purchase order/s that the customer have made on this account.
      */
     private ArrayList<PurchaseOrder> purchaseOrders;
+    public ArrayList<PurchaseOrder> getpurchaseOrders() {
+    	return purchaseOrders;
+    }
+    public void addPO(PurchaseOrder po) {
+    	purchaseOrders.add(po);
+    }
 
     /**
      * The cart of the customer account holds products that the customer has placed into it.
      */
     private Cart shoppingCart;
+    public Cart getCart() {
+    	return shoppingCart;
+    }
 
     /**
      * The address/es that the customer has added into their account,
      */
-    private Set<IAddress> deliveryAddress;
+    private ArrayList<IAddress> deliveryAddress;
+    public ArrayList<IAddress> getdeliveryAddress() {
+    	return deliveryAddress;
+    }
+    public void addAddress(IAddress address) {
+    	deliveryAddress.add(address);
+    }
     
     
     private Accounting mAccounting = Accounting.getInstance();
