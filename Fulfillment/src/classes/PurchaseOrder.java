@@ -1,6 +1,7 @@
 package classes;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import roles.Recipient;
@@ -108,6 +109,16 @@ public class PurchaseOrder {
 			}
 		}
 		return isValid;
+	}
+
+	public List<Product> getProductsInCart() {
+		// TODO Auto-generated method stub
+		ArrayList<Product> products = new ArrayList<Product>();
+		Set<Quantity> p = this.purchaseCart.getProducts();
+		for(Quantity q: p){
+			products.add(q.getProduct());
+		}
+		return products;
 	}
 		
 }
