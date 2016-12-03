@@ -97,6 +97,9 @@ public class CustomerAccount {
     public void addCC(ICreditCard card) {
     	creditCards.add(card);
     }
+    public void removeCC(int i) {
+    	creditCards.remove(i);
+    }
 
     /**
      * The phone number/s that the customer have added to their account.
@@ -108,6 +111,9 @@ public class CustomerAccount {
     public void addTelephone(ITelephone phone) {
     	phoneNumbers.add(phone);
     }
+    public void removeTelephone(int i) {
+    	phoneNumbers.remove(i);
+    }
 
     /**
      * The coupon/s that the customer have added to their account.
@@ -118,6 +124,9 @@ public class CustomerAccount {
     }
     public void addCoupon(Coupon coupon) {
     	coupons.add(coupon);
+    }
+    public void removeCoupon(int i) {
+    	coupons.remove(i);
     }
 
     /**
@@ -148,6 +157,9 @@ public class CustomerAccount {
     }
     public void addAddress(IAddress address) {
     	deliveryAddress.add(address);
+    }
+    public void removeAddress(int i) {
+    	deliveryAddress.remove(i);
     }
     
     
