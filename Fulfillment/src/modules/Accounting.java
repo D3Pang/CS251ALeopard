@@ -1,5 +1,6 @@
 package modules;
 
+import java.util.HashSet;
 import java.util.NoSuchElementException;
 import java.util.Set;
 
@@ -15,7 +16,7 @@ public class Accounting implements IAccounting {
 
 	private static Accounting mAccounting;
 	private long invoiceIdIndex = 0;
-	private Set<Invoice> invoiceMaster;
+	private Set<Invoice> invoiceMaster = new HashSet<Invoice>();
 	public static Accounting getInstance() {
 		
 		if(mAccounting == null) {
