@@ -7,6 +7,7 @@ import javax.activity.InvalidActivityException;
 
 import classes.PurchaseOrder;
 import factories.ICreditCard;
+import references.CreditCard;
 import roles.ServiceAgent;
 
 
@@ -54,8 +55,11 @@ public class Accounting implements IAccounting {
 		// Charge creditcard if successful mark the invoice as paid
 		Invoice inv = getInvoiceById(invoiceId);
 		if(inv != null){
-			inv.setStatus(InvoiceStatus.PAID);
-			return true;
+			if(this.chargeCard(cc, inv.getAmount().getAmount())){
+				inv.setStatus(InvoiceStatus.PAID);
+				return true;
+			}
+			else return false;
 		}
 		throw new NoSuchElementException("Invoice not found!");
 	}
@@ -88,5 +92,9 @@ public class Accounting implements IAccounting {
 			if(invoice.getInvoiceID() == invoiceId) return invoice;
 		}
 		return null;
+	}
+	
+	private boolean chargeCard(ICreditCard c, double amount){
+		return c.getBalance() + amount < c.getMaxBalance();
 	}
 }

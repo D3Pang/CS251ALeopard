@@ -5,4 +5,6 @@ public interface ICreditCard {
   int getCvvNumber();
   int getExpMonth();
   int getExpYear();
+double getBalance();
+double getMaxBalance();
 }
