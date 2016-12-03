@@ -30,6 +30,13 @@ public class PurchaseOrder {
 	
 	public PurchaseOrder(Cart c){
 		purchaseCart = c;
+		POID = "";
+		invoiceID = "";
+		shipmentID = "";
+		status = null;
+		coupons = new ArrayList<Coupon>();
+		
+		recipient = new Recipient();
 	}
 	
 	public PurchaseOrder(String pOID, String invoiceID, String shipmentID,
@@ -105,7 +112,7 @@ public class PurchaseOrder {
 			double price = product.getPrice().getAmount();
 			float tax = product.getTax();
 			int quantity = q.getQuantity();
-			totalAmount += price + (price * tax / 100) * quantity;
+			totalAmount += (price + (price * tax / 100)) * quantity;
 		}
 		for(Coupon c : coupons){
 			if(c.isPercentageOffer()){
