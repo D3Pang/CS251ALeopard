@@ -252,7 +252,7 @@ public class CustomerAccount {
     			}
     			validResponse = true;
     			String invId = mAccounting.generateInvoice(this.customerID, po);
-    			System.out.println(invId);
+    			System.out.println("This is your invoice Id: " + invId);
     			mAccounting.processPayment(invId, creditCards.get(ccIndex));
     			return true;
     			
@@ -269,6 +269,39 @@ public class CustomerAccount {
     			}
     		}
     	}
+    	else {
+    		String input;
+    		po.setStatus(POStatus.CONFIRMED);
+			System.out.println("Which creditcard would you like to use?");
+			input = response.nextLine();
+			int cc = Integer.valueOf(input);
+			
+			int ccIndex = 0;
+			
+			int cv, month, year;
+			System.out.println("What is the cvvNumber?");
+			input = response.nextLine();
+			cv = Integer.valueOf(input);
+			System.out.println("What is the expiration month?");
+			input = response.nextLine();
+			month = Integer.valueOf(input);
+			System.out.println("What is the expiration year?");
+			input = response.nextLine();
+			year = Integer.valueOf(input);
+			ICreditCard card = new CreditCard(cc, cv, month, year, 5000, 10000); //Balance is for just for testing purposes
+			
+			if(!creditCards.contains(cc)) {
+				creditCards.add(card);
+				ccIndex = creditCards.indexOf(card);
+			}
+			else {
+				ccIndex = creditCards.indexOf(card);
+			}
+			String invId = mAccounting.generateInvoice(this.customerID, po);
+			System.out.println("This is your invoice Id: " + invId);
+			mAccounting.processPayment(invId, creditCards.get(ccIndex));
+    	}
+    	
     	return null;
     }
 
