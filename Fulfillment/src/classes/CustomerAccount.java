@@ -240,7 +240,7 @@ public class CustomerAccount {
 				System.out.println("What is the expiration year?");
 				input = response.nextLine();
 				year = Integer.valueOf(input);
-				ICreditCard card = new CreditCard(cc, cv, month, year);
+				ICreditCard card = new CreditCard(cc, cv, month, year, 5000, 10000); //Balance is for just for testing purposes
 				
     			if(!creditCards.contains(cc)) {
     				creditCards.add(card);
