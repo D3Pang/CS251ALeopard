@@ -79,7 +79,7 @@ public class CustomerAccount {
     /**
      * A list of invoice IDs to allow the customer to browse past invoices made on this account.
      */
-    private ArrayList<String> invoiceHistory;
+    private ArrayList<String> invoiceHistory = new ArrayList<String>();
     public ArrayList<String> getInvoiceHistory() {
     	return invoiceHistory;
     }
@@ -90,7 +90,7 @@ public class CustomerAccount {
     /**
      * The credit card/s that the customer have added to their account.
      */
-    private ArrayList<ICreditCard> creditCards;
+    private ArrayList<ICreditCard> creditCards = new ArrayList<ICreditCard>();
     public ArrayList<ICreditCard> getcreditCards() {
     	return creditCards;
     }
@@ -104,7 +104,7 @@ public class CustomerAccount {
     /**
      * The phone number/s that the customer have added to their account.
      */
-    private ArrayList<ITelephone> phoneNumbers;
+    private ArrayList<ITelephone> phoneNumbers = new ArrayList<ITelephone>();
     public ArrayList<ITelephone> getphoneNumbers() {
     	return phoneNumbers;
     }
@@ -118,7 +118,7 @@ public class CustomerAccount {
     /**
      * The coupon/s that the customer have added to their account.
      */
-    private ArrayList<Coupon> coupons;
+    private ArrayList<Coupon> coupons = new ArrayList<Coupon>();
     public ArrayList<Coupon> getCoupons() {
     	return coupons;
     }
@@ -132,7 +132,7 @@ public class CustomerAccount {
     /**
      * The purchase order/s that the customer have made on this account.
      */
-    private ArrayList<PurchaseOrder> purchaseOrders;
+    private ArrayList<PurchaseOrder> purchaseOrders = new ArrayList<PurchaseOrder>();
     public ArrayList<PurchaseOrder> getpurchaseOrders() {
     	return purchaseOrders;
     }
@@ -151,7 +151,7 @@ public class CustomerAccount {
     /**
      * The address/es that the customer has added into their account,
      */
-    private ArrayList<IAddress> deliveryAddress;
+    private ArrayList<IAddress> deliveryAddress = new ArrayList<IAddress>();
     public ArrayList<IAddress> getdeliveryAddress() {
     	return deliveryAddress;
     }
@@ -177,14 +177,8 @@ public class CustomerAccount {
     	this.firstName = firstName;
     	this.lastName = lastName;
     	this.emailID = emailID;
-    	this.invoiceHistory = null;
-    	this.creditCards = new ArrayList<ICreditCard>();
-    	this.phoneNumbers = new ArrayList<ITelephone>();
-    	this.deliveryAddress = new ArrayList<IAddress>();
     	this.creditCards.add(factory.makeCC(number, cvvNumber, expMonth, expYear));
     	this.phoneNumbers.add(factory.makePhoneNumber(areaCode, phoneNumber, extension, countryCode));
-    	this.coupons = null;
-    	this.purchaseOrders = null;
     	this.deliveryAddress.add(factory.makeAddress(addressLine1, addressLine2, city, province, postalCode, country));
     }
     
@@ -196,7 +190,7 @@ public class CustomerAccount {
      * In this implementation it creates a mock purchase order for testing purposes
      * @return a boolean decision on whether or not the cart is purchased
      */
-    private Boolean purchaseCart() {
+    public Boolean purchaseCart() {
         	//TODO Need to send a request to IMS to check on products
         	PurchaseOrder po = mFulfillment.generatePurchaseOrder();
         	

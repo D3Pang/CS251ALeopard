@@ -1,5 +1,6 @@
 package modules;
 
+import java.util.HashSet;
 import java.util.NoSuchElementException;
 import java.util.Set;
 
@@ -12,7 +13,7 @@ public class Fulfillment {
 
 	private static Fulfillment mFulfillment;
 	private long POIdIndex = 0;
-	private Set<PurchaseOrder> POMaster;
+	private Set<PurchaseOrder> POMaster = new HashSet<PurchaseOrder>();
 	public static Fulfillment getInstance() {
 		
 		if(mFulfillment == null) {
