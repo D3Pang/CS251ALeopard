@@ -30,6 +30,13 @@ public class PurchaseOrder {
 	
 	public PurchaseOrder(Cart c){
 		purchaseCart = c;
+		POID = "";
+		invoiceID = "";
+		shipmentID = "";
+		status = null;
+		coupons = new ArrayList<Coupon>();
+		
+		recipient = new Recipient();
 	}
 	
 	public PurchaseOrder(String pOID, String invoiceID, String shipmentID,
