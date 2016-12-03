@@ -42930,7 +42930,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Accounting",
+											"text": "IAccounting",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -47308,7 +47308,7 @@
 											"containerExtending": false,
 											"left": 1541,
 											"top": 1053,
-											"width": 191.4453125,
+											"width": 103,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -47334,11 +47334,11 @@
 											"containerExtending": false,
 											"left": 1541,
 											"top": 1068,
-											"width": 191.4453125,
+											"width": 103,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Inventory Management System",
+											"text": "IInventory",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -47406,7 +47406,7 @@
 									"containerExtending": false,
 									"left": 1536,
 									"top": 1048,
-									"width": 201.4453125,
+									"width": 113,
 									"height": 38,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -47530,7 +47530,7 @@
 							"containerExtending": false,
 							"left": 1536,
 							"top": 1048,
-							"width": 201.4453125,
+							"width": 113,
 							"height": 49,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -47589,7 +47589,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 1455,
-									"top": 1085,
+									"top": 1084,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -47623,7 +47623,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 1455,
-									"top": 1100,
+									"top": 1099,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -47657,7 +47657,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 1454,
-									"top": 1056,
+									"top": 1055,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -47691,7 +47691,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 1509,
-									"top": 1084,
+									"top": 1083,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -47725,7 +47725,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 1507,
-									"top": 1097,
+									"top": 1096,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -47759,7 +47759,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 1513,
-									"top": 1057,
+									"top": 1056,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -47793,7 +47793,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 1373,
-									"top": 1087,
+									"top": 1086,
 									"width": 57.45263671875,
 									"height": 13,
 									"autoResize": false,
@@ -47828,7 +47828,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 1403,
-									"top": 1100,
+									"top": 1099,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -47862,7 +47862,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 1394,
-									"top": 1059,
+									"top": 1058,
 									"width": 5.05908203125,
 									"height": 13,
 									"autoResize": false,
@@ -47943,7 +47943,7 @@
 								"$ref": "AAAAAAFYvgYk+QrU5WQ="
 							},
 							"lineStyle": 1,
-							"points": "1535:1075;1375:1079",
+							"points": "1535:1074;1375:1078",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -48008,7 +48008,7 @@
 								"$ref": "AAAAAAFYpA8PxLZpcNA="
 							},
 							"lineStyle": 1,
-							"points": "1501:994;1455:1077"
+							"points": "1500:994;1455:1076"
 						}
 					]
 				},
@@ -50990,7 +50990,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFYk8a5XNUfY8w="
 					},
-					"name": "Accounting",
+					"name": "IAccounting",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",
@@ -51188,7 +51188,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFYk8a5XNUfY8w="
 					},
-					"name": "Inventory Management System",
+					"name": "IInventory",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -52705,9 +52705,9 @@
 													"showShadow": true,
 													"containerChangeable": false,
 													"containerExtending": false,
-													"left": 1197.10986328125,
+													"left": 1197.0908203125,
 													"top": 101,
-													"width": 39,
+													"width": 39.01904296875,
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
@@ -52726,9 +52726,9 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1192.10986328125,
+											"left": 1192.0908203125,
 											"top": 96,
-											"width": 49,
+											"width": 49.01904296875,
 											"height": 23,
 											"autoResize": false
 										}
