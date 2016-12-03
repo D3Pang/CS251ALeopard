@@ -20,32 +20,26 @@ public class Address implements IAddress {
 	}
 
 	public String getLine1() {
-		// TODO Auto-generated method stub
 		return addressLine1;
 	}
 
 	public String getLine2() {
-		// TODO Auto-generated method stub
 		return addressLine2;
 	}
 
 	public String getCity() {
-		// TODO Auto-generated method stub
 		return city;
 	}
 
 	public String getProvince() {
-		// TODO Auto-generated method stub
 		return province;
 	}
 
 	public int getPostalCode() {
-		// TODO Auto-generated method stub
 		return postalCode;
 	}
 
 	public String getCountry() {
-		// TODO Auto-generated method stub
 		return country;
 	}
 

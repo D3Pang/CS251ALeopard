@@ -6,7 +6,6 @@ package modules;
 import values.Money;
 
 /**
- * @author vikram
  *
  */
 public class ShippingMethod implements IShippingMethod {

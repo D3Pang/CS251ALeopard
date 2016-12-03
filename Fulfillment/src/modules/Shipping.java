@@ -6,7 +6,6 @@ import java.util.List;
 import classes.PurchaseOrder;
 
 /**
- * @author Vikram
  * Singleton Shipping that will act as an adapter between Fulfillment & SS (to be implemented by SS).
  */
 public final class Shipping {
