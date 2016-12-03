@@ -15,9 +15,12 @@ import org.junit.Test;
 import values.Currency;
 import values.Money;
 import classes.Cart;
+import classes.CustomerAccount;
 import classes.Product;
 import classes.PurchaseOrder;
 import classes.Quantity;
+import factories.AccountFactory;
+import factories.IAccountFactory;
 
 public class TestCases {
 	private ShippingMethod standard = new ShippingMethod(5.0, ShippingSpeed.STANDARD);
@@ -49,6 +52,21 @@ public class TestCases {
 		cart.add(invalid, 1);
 		PurchaseOrder po = new PurchaseOrder(cart);
 		assertEquals(false, po.isCartValid());
+	}
+	
+	@Test
+	public void testAccount() {
+		IAccountFactory factory = new AccountFactory();
+		CustomerAccount acc = new CustomerAccount("cusID", "username", "first", "last", "email", 11, 22, 33, 44, "area", "phone", "ext", "country", 
+				"line1", "line2", "city", "province", 123, "country", factory);
+		System.out.println("Account Created");
+		//Add an item here
+		System.out.println("Stop");
+		acc.getCart().add(nails, 1);
+		System.out.println("Second");
+		acc.purchaseCart();////////////////
+		System.out.println("Third");
+		System.out.println("Cart purchased");
 	}
 
 }

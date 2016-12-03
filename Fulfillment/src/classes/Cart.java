@@ -8,6 +8,14 @@ public class Cart {
 	private ArrayList<Quantity> products;
 	private ArrayList<Product> listProducts;
 	
+	public String toString() {
+		String displayer = "Products:";
+		for(Quantity q: products) {
+		displayer += " " + q.getProduct().toString() + " Quantity: " + q.getQuantity(); 
+		}
+		return displayer;
+	}
+	
 	public Cart(){
 		this.products = new ArrayList<Quantity>();
 		this.listProducts = new ArrayList<Product>();

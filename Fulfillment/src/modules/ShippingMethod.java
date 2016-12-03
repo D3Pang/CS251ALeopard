@@ -7,7 +7,6 @@ import values.Currency;
 import values.Money;
 
 /**
- * @author vikram
  *
  */
 public class ShippingMethod implements IShippingMethod {

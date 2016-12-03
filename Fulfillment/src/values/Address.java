@@ -25,7 +25,6 @@ public class Address implements IAddress {
 	}
 
 	public String getLine1() {
-		// TODO Auto-generated method stub
 		return addressLine1;
 	}
 	public void setLine1(String addressLine1) {
@@ -33,7 +32,6 @@ public class Address implements IAddress {
 	}
 
 	public String getLine2() {
-		// TODO Auto-generated method stub
 		return addressLine2;
 	}
 	public void setLine2(String addressLine2) {
@@ -41,7 +39,6 @@ public class Address implements IAddress {
 	}
 
 	public String getCity() {
-		// TODO Auto-generated method stub
 		return city;
 	}
 	public void setCity(String city) {
@@ -49,7 +46,6 @@ public class Address implements IAddress {
 	}
 
 	public String getProvince() {
-		// TODO Auto-generated method stub
 		return province;
 	}
 	public void setProvince(String province) {
@@ -57,7 +53,6 @@ public class Address implements IAddress {
 	}
 
 	public int getPostalCode() {
-		// TODO Auto-generated method stub
 		return postalCode;
 	}
 	public void setPostalCode(int postalCode) {
@@ -65,7 +60,6 @@ public class Address implements IAddress {
 	}
 
 	public String getCountry() {
-		// TODO Auto-generated method stub
 		return country;
 	}
 	public void setCountry(String country) {
