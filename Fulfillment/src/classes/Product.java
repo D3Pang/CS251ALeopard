@@ -20,7 +20,7 @@ public class Product {
 		this.shipping = shipping;
 	}
 	public String toString() {
-		return "Product[id="+productId+", info="+desc+", tax="+Float.toString(tax)+", price="+price.toString()+"]";
+		return "Product[id="+productId+", info="+desc+", tax="+Float.toString(tax)+", price="+price.toString()+ ", shipping = " + shipping.shippingCost()+"]";
 	}
 	public String getProductId() {
 		return productId;
