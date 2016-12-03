@@ -45,6 +45,9 @@ public class AccountFactory implements IAccountFactory {
         /**
          * 
          */
+        
+        private double balance;
+        private double maxBalance;
         private int expYear;
 
 		public int getNumber() {
@@ -61,6 +64,16 @@ public class AccountFactory implements IAccountFactory {
 
 		public int getExpYear() {
 			return expYear;
+		}
+
+		public double getBalance() {
+			// TODO Auto-generated method stub
+			return balance;
+		}
+
+		public double getMaxBalance() {
+			// TODO Auto-generated method stub
+			return maxBalance;
 		}
 
     }

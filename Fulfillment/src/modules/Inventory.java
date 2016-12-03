@@ -70,7 +70,7 @@ public final class Inventory implements IInventory {
 		return matches;
 	}
 	public boolean confirmAvailability(PurchaseOrder po) {
-		Set<Quantity> cart = po.getPurchaseCart().getProducts();
+		ArrayList<Quantity> cart = po.getPurchaseCart().getProducts();
 		for(Quantity qty : cart) {
 			if(!qty.getProduct().isInStock()) {
 				return false;

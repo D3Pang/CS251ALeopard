@@ -97,6 +97,9 @@ public class CustomerAccount {
     public void addCC(ICreditCard card) {
     	creditCards.add(card);
     }
+    public void removeCC(int i) {
+    	creditCards.remove(i);
+    }
 
     /**
      * The phone number/s that the customer have added to their account.
@@ -108,6 +111,9 @@ public class CustomerAccount {
     public void addTelephone(ITelephone phone) {
     	phoneNumbers.add(phone);
     }
+    public void removeTelephone(int i) {
+    	phoneNumbers.remove(i);
+    }
 
     /**
      * The coupon/s that the customer have added to their account.
@@ -118,6 +124,9 @@ public class CustomerAccount {
     }
     public void addCoupon(Coupon coupon) {
     	coupons.add(coupon);
+    }
+    public void removeCoupon(int i) {
+    	coupons.remove(i);
     }
 
     /**
@@ -149,6 +158,9 @@ public class CustomerAccount {
     public void addAddress(IAddress address) {
     	deliveryAddress.add(address);
     }
+    public void removeAddress(int i) {
+    	deliveryAddress.remove(i);
+    }
     
     
     private Accounting mAccounting = Accounting.getInstance();
@@ -156,7 +168,7 @@ public class CustomerAccount {
      * A constructor for CustomerAccount to generate a mock customer account
      */
     public CustomerAccount(String customerID, String username, String firstName, String lastName, String emailID,
-    		int number, int cvvNumber, int expMonth, int expYear, 
+    		int number, int cvvNumber, int expMonth, int expYear, double balance, double maxBalance,
     		String areaCode, String phoneNumber, String extension, String countryCode,
     		String addressLine1, String addressLine2, String city, String province, int postalCode, String country,
     		IAccountFactory factory) {
@@ -222,6 +234,7 @@ public class CustomerAccount {
     			int ccIndex = 0;
     			
 				int cv, month, year;
+				double balance, maxBalance;
 				System.out.println("What is the cvvNumber?");
 				input = response.nextLine();
 				cv = Integer.valueOf(input);
@@ -231,7 +244,11 @@ public class CustomerAccount {
 				System.out.println("What is the expiration year?");
 				input = response.nextLine();
 				year = Integer.valueOf(input);
-				ICreditCard card = new CreditCard(cc, cv, month, year);
+				System.out.println("What is the current balance?");
+				balance = Double.valueOf(input);
+				System.out.println("What is the maximum balance?");
+				maxBalance = Double.valueOf(input);
+				ICreditCard card = new CreditCard(cc, cv, month, year, balance, maxBalance);
 				
     			if(!creditCards.contains(cc)) {
     				creditCards.add(card);

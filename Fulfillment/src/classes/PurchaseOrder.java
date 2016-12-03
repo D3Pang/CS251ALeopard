@@ -14,7 +14,7 @@ public class PurchaseOrder {
 	private String invoiceID;
 	private String shipmentID;
 	private POStatus status;
-	private ArrayList<Coupon> coupons;
+	private ArrayList<Coupon> coupons = new ArrayList<Coupon>();
 	private Cart purchaseCart;
 	private Recipient recipient;
 	
@@ -106,13 +106,13 @@ public class PurchaseOrder {
 
 	public Money calculateTotalCost(){	//	Calculate coupon discounts
 		double totalAmount = 0.00;
-		Set<Quantity> products = this.purchaseCart.getProducts();
+		ArrayList<Quantity> products = this.purchaseCart.getProducts();
 		for(Quantity q: products){
 			Product product = q.getProduct();
 			double price = product.getPrice().getAmount();
 			float tax = product.getTax();
 			int quantity = q.getQuantity();
-			totalAmount += (price + (price * tax / 100)) * quantity;
+			totalAmount += price * (1 + ((double)tax / 100.0)) * (double)quantity;
 		}
 		for(Coupon c : coupons){
 			if(c.isPercentageOffer()){
@@ -140,7 +140,7 @@ public class PurchaseOrder {
 	public List<Product> getProductsInCart() {
 		// TODO Auto-generated method stub
 		ArrayList<Product> products = new ArrayList<Product>();
-		Set<Quantity> p = this.purchaseCart.getProducts();
+		ArrayList<Quantity> p = this.purchaseCart.getProducts();
 		for(Quantity q: p){
 			products.add(q.getProduct());
 		}
