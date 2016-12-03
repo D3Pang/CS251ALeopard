@@ -56,6 +56,7 @@ public class TestCases {
 	
 	@Test
 	public void testAccount() {
+		Product nails = new Product("01", "Nails", true, 2, new Money(2.00, Currency.USD), standard);
 		IAccountFactory factory = new AccountFactory();
 		CustomerAccount acc = new CustomerAccount("cusID", "username", "first", "last", "email", 11, 22, 33, 44, "area", "phone", "ext", "country", 
 				"line1", "line2", "city", "province", 123, "country", factory);
