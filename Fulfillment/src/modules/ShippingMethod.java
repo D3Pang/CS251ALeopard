@@ -3,6 +3,7 @@
  */
 package modules;
 
+import values.Currency;
 import values.Money;
 
 /**
@@ -11,11 +12,12 @@ import values.Money;
  */
 public class ShippingMethod implements IShippingMethod {
 
-	/**
-	 * 
-	 */
-	public ShippingMethod() {
-		// TODO Auto-generated constructor stub
+	private Money cost;
+	private ShippingSpeed speed;
+	
+	public ShippingMethod(double cost, ShippingSpeed speed) {
+		this.cost = new Money(cost, Currency.USD);
+		this.speed = speed;
 	}
 
 	/* (non-Javadoc)
@@ -23,7 +25,7 @@ public class ShippingMethod implements IShippingMethod {
 	 */
 	public ShippingSpeed speed() {
 		// TODO Auto-generated method stub
-		return null;
+		return speed;
 	}
 
 	/* (non-Javadoc)
@@ -31,7 +33,7 @@ public class ShippingMethod implements IShippingMethod {
 	 */
 	public Money shippingCost() {
 		// TODO Auto-generated method stub
-		return null;
+		return cost;
 	}
 
 }

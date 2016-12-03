@@ -23,17 +23,19 @@ public final class Inventory implements IInventory {
 	/**
 	 * 
 	 */
+	private ShippingMethod standard = new ShippingMethod(5.0, ShippingSpeed.STANDARD);
+	
 	private Inventory() {
-		products.add(new Product("p001", "Android phone", true, (float) 7.5, new Money(799, Currency.USD)));
-		products.add(new Product("p002", "Apple iPhone", true, (float) 7.5, new Money(499, Currency.USD)));
-		products.add(new Product("p003", "Dell laptop", true, (float) 7.5, new Money(749, Currency.USD)));
-		products.add(new Product("p004", "Blackberry", true, (float) 7.5, new Money(399, Currency.USD)));
-		products.add(new Product("p005", "Amazon Kindle Fire", true, (float) 7.5, new Money(59.99, Currency.USD)));
-		products.add(new Product("p006", "Apple TV", true, (float) 7.5, new Money(199.99, Currency.USD)));
-		products.add(new Product("p007", "Chromecast", true, (float) 7.5, new Money(25.99, Currency.USD)));
-		products.add(new Product("p008", "Android phone", true, (float) 7.5, new Money(799, Currency.USD)));
-		products.add(new Product("p009", "Hershey's Chocolates", true, (float) 2.5, new Money(29.99, Currency.USD)));
-		products.add(new Product("p009", "Ghirardelli Gift Box", true, (float) 2.5, new Money(69.99, Currency.USD)));
+		products.add(new Product("p001", "Android phone", true, (float) 7.5, new Money(799, Currency.USD), standard));
+		products.add(new Product("p002", "Apple iPhone", true, (float) 7.5, new Money(499, Currency.USD), standard));
+		products.add(new Product("p003", "Dell laptop", true, (float) 7.5, new Money(749, Currency.USD), standard));
+		products.add(new Product("p004", "Blackberry", true, (float) 7.5, new Money(399, Currency.USD), standard));
+		products.add(new Product("p005", "Amazon Kindle Fire", true, (float) 7.5, new Money(59.99, Currency.USD), standard));
+		products.add(new Product("p006", "Apple TV", true, (float) 7.5, new Money(199.99, Currency.USD), standard));
+		products.add(new Product("p007", "Chromecast", true, (float) 7.5, new Money(25.99, Currency.USD), standard));
+		products.add(new Product("p008", "Android phone", true, (float) 7.5, new Money(799, Currency.USD), standard));
+		products.add(new Product("p009", "Hershey's Chocolates", true, (float) 2.5, new Money(29.99, Currency.USD), standard));
+		products.add(new Product("p009", "Ghirardelli Gift Box", true, (float) 2.5, new Money(69.99, Currency.USD), standard));
 	}
 	private static Inventory mInventory;
 	public static Inventory getInstance() {

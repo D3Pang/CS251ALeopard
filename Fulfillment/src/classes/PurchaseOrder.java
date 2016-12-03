@@ -113,6 +113,8 @@ public class PurchaseOrder {
 			float tax = product.getTax();
 			int quantity = q.getQuantity();
 			totalAmount += price * (1 + ((double)tax / 100.0)) * (double)quantity;
+			totalAmount += product.getShipping().shippingCost().getAmount();
+			
 		}
 		for(Coupon c : coupons){
 			if(c.isPercentageOffer()){

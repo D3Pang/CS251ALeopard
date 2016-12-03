@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Set;
 
 import modules.Inventory;
+import modules.ShippingMethod;
+import modules.ShippingSpeed;
 
 import org.junit.Test;
 
@@ -18,9 +20,11 @@ import classes.PurchaseOrder;
 import classes.Quantity;
 
 public class TestCases {
-	private Product nails = new Product("01", "Nails", true, 2, new Money(2.00, Currency.USD));
-	private Product coffee = new Product("02", "Coffee", true, 2, new Money(3.00, Currency.USD));
-	private Product invalid = new Product("00", "Invalid", false, 0, new Money(-1.0, Currency.USD));
+	private ShippingMethod standard = new ShippingMethod(5.0, ShippingSpeed.STANDARD);
+	
+	private Product nails = new Product("01", "Nails", true, 2, new Money(2.00, Currency.USD), standard);
+	private Product coffee = new Product("02", "Coffee", true, 2, new Money(3.00, Currency.USD), standard);
+	private Product invalid = new Product("00", "Invalid", false, 0, new Money(-1.0, Currency.USD), standard);
 	
 	@Test
 	public void testAddToCart() {
@@ -35,7 +39,7 @@ public class TestCases {
 		cart.add(nails, 1);
 		cart.add(coffee, 2);
 		PurchaseOrder po = new PurchaseOrder(cart);
-		Money expected = new Money(8.16, Currency.USD);
+		Money expected = new Money(18.16, Currency.USD);
 		assertEquals(expected.getAmount(), po.calculateTotalCost().getAmount(), 0.1);
 	}
 	
