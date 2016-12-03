@@ -143,7 +143,7 @@ public class CustomerAccount {
     /**
      * The cart of the customer account holds products that the customer has placed into it.
      */
-    private Cart shoppingCart;
+    private Cart shoppingCart = new Cart();
     public Cart getCart() {
     	return shoppingCart;
     }
@@ -196,7 +196,8 @@ public class CustomerAccount {
         	
         	// When we send PurchaseOrder to Accounting to generate corresponding invoice, it calls the setInvoiceId method on the PurchaseOrder instance
         	po.setInvoiceID("invoice1");
-        	po.setShipmentID("shipement1");
+  //      	System.out.println("How would you like it shipped?");
+        	po.setShipmentID("shipment1");
         	po.setCoupons(coupons);
         	po.setPurchaseCart(shoppingCart);
         	Recipient recipient = new Recipient();
@@ -214,8 +215,8 @@ public class CustomerAccount {
      */
     private Boolean confirmPurchase(PurchaseOrder po) {
     	Scanner response = new Scanner(System.in);
-    	System.out.println(shoppingCart.getProducts());
-		System.out.println(po.calculateTotalCost().toString());
+    	System.out.println(shoppingCart.toString());
+		System.out.println("Total Price: "+ po.calculateTotalCost().toString());
     	if(!po.isCartValid()) {
     		System.out.println("Some items are not available. Would you still like to continue with purchase?");
     		String input = response.nextLine(); 
